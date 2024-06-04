@@ -7,16 +7,24 @@
 </head>
 
 <body>
-    <p>
-        Absolute Image Linking : 
-    </p>
-    <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Lykan_HyperSport.jpg/800px-Lykan_HyperSport.jpg" alt = "W Motors Lykan HyperSport" height="300px" wigth = "300px">
+
+    <p> Absolute Image Linking : </p>
+    <img src = "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e6/Lykan_HyperSport.jpg/800px-Lykan_HyperSport.jpg"
+        alt = "W Motors Lykan HyperSport" height="300px" wigth = "300px" onerror = "this.src = 'noImage.webp'">
+    
     <br><br><br>
 
-    <p>
-        Relative Image Linking : 
-    </p>
-    <img src = "practiceQuestions_02.jpg" alt = "Image Not Found" height="500px" wigth = "100px">
+    <p> Relative Image Linking : </p>
+    <img src = "practiceQuestions_03.jpg" alt = "Image Not Found" height="500px" wigth = "100px"
+        onerror = "this.src = noImage.webp">
+
+    <!--
+        The <img> tag is used to insert an image in our web page.
+        It is a single tag.
+        The alt attribute is the text that we want to display in case the image is not found.
+        We can even display an another image in case the source image is not found using the 
+        onerror = "this.src = 'link_of_new_image'" attribute.
+    --> 
 </body>
 
 </html>
