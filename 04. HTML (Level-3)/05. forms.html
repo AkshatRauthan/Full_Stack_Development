@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forms In HTML</title>
+</head>
+
+<!--
+    Forms In HTML Are Used To Collect Data From The User.
+    The action attribute is used to link any external script file that stores all tha actions
+    that we want to perform after collecting all the data from the user.
+-->
+
+<!--
+    Forms In HTML Have The Following Parts : 
+    
+    A) Input Tag : Input Tag Is Used To Take Input Of Diffrent Types Directly From The Reader.
+    Some Common Types Of Input Contains : text, number, password, date, time, color etc.
+
+    # a) Placeholder Attribute : With The Placeholder Attribute We Can Give The Text That We Want To Show 
+    #    In Our Input Box When It Is Empty.
+
+    # b) Name Attribute : The Name Attribute Assigns A Key To The User Input Provided Through The Input Box
+    #    So That It Can Be Distinguished From Other Input Value.
+    # For ex : {"name" : "Akshat"} where "name" => value Of name attribute, "Akshat" => User Input In Input Box.
+
+
+
+    B) Label Tag : Form Labels Are Used To Group Input Tags Along With Their Textual Description
+    Provided In The Web-Page.
+
+    # a) For Attribute : The for Attribute Is Used To Group The Text Inside The Label Tag With A Form Element
+    #    In Case The Element Is Present Outside The Form Tag By Passing Its Id In It.
+
+
+
+    C) Button Tag : Button Tags Are Used To Create Buttons In A Web-page That Can Perform Some Predefined Actions.
+    Inside A From Tag The Default Behaviour Of A Button Is That It Submits The Form And Opens The File Linked With The
+    Action Attribute Of The Form. Buttons Can Even Be Created Outside The Form Tags However Such Butttons Do Not Do 
+    Anything Until Specified In The HTML File.
+
+    # a) Type Attribute : The Type Attribute Is Used To Specify The Task Performed By The Button .
+    #     There Are Three Diffrent Types Of Buttons : 
+    #       o} Submit : This Type Of Buttons Submits The Whole Form. This Is The default Type Of Button.
+    #       o} Reset  : Clears All The Data Stored In The Form.
+    #       o} Button : This Buttons Perform User Defined Tasks That Are Defined In An External Script File Linked To Them.
+
+    D) TextArea Tag : Used To Take Multi Line Input From The Viewer.
+-->
+
+<!--                     --------------------# Easter-Egg #-----------------------
+                         ............Creating Buttons From Input Tags.............
+    a) Create An Input Box With Type = "button".
+    b) In The Value Attribute Pass The Text That You Want To Display In The Button.
+    c) Specify The Type Of The Button In The Same Way As You Do For Button Elements.
+    d) The Button Is Created.
+.                                              OR
+    To Create A Submit Button Directly Specify Type = "submit" In Input Tag.
+-->
+
+<body>
+
+    <form action="/action">
+        
+        <label for="username"> Username : </label>
+        <input type="text" id="username" placeholder="Enter Your Name : " name="username"><br><br>
+        
+        <label for="age"> Age : </label>
+        <input type="number" id="age" placeholder="Enter Your Age : " name="age"><br><br>
+
+        <label for="password"> Password : </label>
+        <input type="password" id="password" placeholder="Enter The Password : " name="password"><br><br>
+
+        <label for="link"> Link : </label>
+        <input type="url" id="link" placeholder="Enter The Link : " name="link"><br><br>
+
+        <label for="email"> Email : </label>
+        <input type="email" id="email" placeholder="Enter Your Email : " name="email"><br><br>
+
+        <label for="feedback"> Please Provide Your Valuable Feedback : </label><br>
+        <textarea name="feedback" id="feedback" rows="2" cols="21" 
+        placeholder="Write Your Feedback Here"></textarea><br><br>
+        <!-- 2 Rows And 10 Cols Are Default Values -->
+
+        <button type="reset"> Reset </button>
+        <button type="submit"> Submit </button>
+        <button type="button"> Button 01 </button><br><br>
+
+        <input type="button" value="Reset Button Using Input" type="reset">
+        <input type="submit">
+
+    </form>
+</body>
+
+</html>

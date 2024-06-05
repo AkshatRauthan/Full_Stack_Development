@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colspan And Rowspan</title>
+</head>
+<!--
+    Colspan => Define The Number Of Columns Which The Current Cell Will Occupy.
+    Rowspan => Define The Number Of Rows Which The Current Cell Will Occupy.
+-->
+<body>
+    <table border="5px">
+        <caption> Food Menu </caption>
+
+
+        <thead>
+            <tr>
+                <th rowspan="2"> Item Name </th>
+                <th colspan="2"> Item Price </th>
+            </tr>
+
+            <tr>
+                <th>INR </th>
+                <th>USD </th>
+            </tr>
+        </thead>
+
+
+        <tbody>
+            <tr>
+                <td> Chat </td>
+                <td> 50 </td>
+                <td> 0.6 </td>
+            </tr>
+    
+            <tr>
+                <td> Samosa </td>
+                <td> 15 </td>
+                <td> 0.18 </td>
+            </tr>
+
+            <tr>
+                <td> Chilli Potato</td>
+                <td> 80 </td>
+                <td> 0.96 </td>
+            </tr>
+        </tbody>
+
+
+        <tfoot><tr>
+            <td> Sum </td>
+            <td> 145 </td>
+            <td> 1.74 </td>
+        </tr></tfoot>
+
+    </table>
+
+</body>
+
+</html>
