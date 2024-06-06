@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Methods Of Applying CSS</title>
+
+    <style>
+        .styleTag {
+            color: rgb(50, 224, 53);
+        }
+    </style>
+
+    <link rel="stylesheet" href="01. applyingCSS.css">
+
+</head>
+
+<!--
+    There Are Three Diffrent Methods Of Applying CSS In Our Webpage :-
+
+#   A) Inline CSS : Embedding Our CSS Styles Directly Along With The Element Tag.
+#          For Ex : <h1 style = "color : red"> Akshat Rauthan </h1>
+
+#   B) Style Tag  : By Definding Our CSS Styling Of The Document In The Style Tag That Is Present In The Head Section.
+#          For Ex : <style> h1 {color : red}
+
+# C) External CSS : By Creating An Another CSS File And Linking It With The Link Tag Present Under The Head Section.
+-->
+
+<body>
+
+    <header>
+        <h1 style="color: rgb(19, 119, 233)">
+            ...This Is An Example Of Inline CSS Styling...
+        </h1>
+    </header>
+
+    <body>
+       <h3><p class="styleTag">
+            ...This Is An Example Of CSS Styling Using Style Tag...
+        </p></h3>
+
+        <p class="externalCSS">
+            ...This Is An Example Of External CSS Styling...
+        </p>
+    </body>
+
+</body>
+
+</html>

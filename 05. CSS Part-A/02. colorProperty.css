@@ -1,0 +1,12 @@
+h1 {
+    color: rgb(8, 107, 141);
+}
+
+p {
+    color:rgba(0, 8, 243, 0.465);
+    font-size: larger;
+}
+
+button {
+    color: orange; 
+}

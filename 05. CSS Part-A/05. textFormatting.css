@@ -1,0 +1,24 @@
+h1{
+    text-align: center;
+    text-decoration: dashed red underline;
+    letter-spacing: 3px;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    /* The First One Is Main While Others Are Backup Written Decreasing Priority Order */
+}
+h2{
+    text-align: center;
+    font-weight:normal;
+    /* Sets The Boldness Of Text. normal (default) : 400   And Weight Is Between 100 And 900 */
+    text-decoration: wavy blue overline;
+    font-family:'impact';
+}
+p {
+    text-align: justify;
+    font-weight: bold;
+    color: rgb(0, 157, 255);
+    line-height:  1.25;
+    font-size: 15px;
+    font-family : Cambria;
+}
+/* Line Height : Used To Manipulate The Height Of Lines. It Do Not Change The Font Size.*/
+/* Letter Spacing : Used To Change The Default Hozizontal Space Between Two Consecutive Words On A Single Line. */

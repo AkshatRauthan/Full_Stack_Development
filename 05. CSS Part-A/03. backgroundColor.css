@@ -1,0 +1,13 @@
+h1 {
+    background-color: lightgrey;
+    color: rgb(118, 41, 190);
+}
+
+p {
+    background-color: rgb(250, 219, 47);
+}
+
+button{
+    color: rgb(255, 132, 9);
+    background-color: rgb(248, 248, 87);
+}

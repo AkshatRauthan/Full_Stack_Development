@@ -1,0 +1,12 @@
+p {
+    color: #ffa511;
+    text-align: center;
+    font-size: 55px;
+    font-weight: 900;
+    letter-spacing: 2px;
+    line-height: 1.5;
+    text-decoration: rgb(22, 231, 231) double underline;
+    text-transform:uppercase;
+    font-family:League Spartan;
+    /* League Spartan Not Suported On Chrome */
+}
