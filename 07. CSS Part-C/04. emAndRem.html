@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Em And Rem In CSS</title>
+    <link rel="stylesheet" href="04. emAndRem.css">
+</head>
+
+<!-- 
+    Uses Of Em : 
+# A) Sets The Typological Properties Of The Element With Respect To Their Values In The Parent 
+#    Of The Element.
+#    Typological Properties Are The Properties Appplied On The Text. Like font-size, weight etc.
+#
+# B) Sets The Other Properties Of The Element With Respect To Their Current Values In The Same Element.
+-->
+
+<!-- 
+    Uses Of Rem : 
+# A) Sets The Typological Properties Of The Element With Respect To Their Values In The Root
+#    Of The Elements.
+#    Typological Properties Are The Properties Appplied On The Text. Like font-size, weight etc.
+#
+# B) Sets The Other Properties Of The Element With Respect To Their Current Values In The Same Element.
+-->
+
+
+<body>
+
+    <h1>.....Use Of Em.....</h1>
+    <div class="parent1">
+        This Is The Parent Element.
+        <br><br><div class="sibling1">
+            This Is The Children Element.
+        </div>
+    </div><br><hr><br>
+
+    <h1>.....Uses Of Rem.....</h1>
+    <div class="parent2">
+        This Is The Parent Element.
+        <br><br><div class="sibling2">
+            This Is The First Level Sibling Element.
+            <br><br><div class="sibling2">
+                This Is The Second Level Sibling Element.
+                <br><br><div class="sibling2">
+                    This Is The Third Level Sibling Element.
+                </div>
+            </div>
+        </div>
+
+</body>
+
+</html>

@@ -1,0 +1,35 @@
+.main{
+    display: flex;
+    justify-content:center;
+    height: 100%;
+    width: 100%;
+}
+
+.trafficLight {
+    height: 380px;
+    width: 150px;
+    border:2px solid black;
+    margin: 10px;
+    padding: 10px;
+}
+
+.lights {
+    height: 90px;
+    width: 90px;
+    padding: 10px;
+    border:2px solid black;
+    border-radius: 50%;
+    margin: 10px 10px 10px 18px;
+}
+
+.lights:nth-of-type(1){
+    background-color: red;
+}
+
+.lights:nth-of-type(2){
+    background-color: yellow;
+}
+
+.lights:nth-of-type(3){
+    background-color: green;
+}

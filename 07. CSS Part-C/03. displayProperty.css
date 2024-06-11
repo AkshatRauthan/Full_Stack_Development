@@ -1,0 +1,30 @@
+.Inline h1,h2 {
+    display: inline;
+    background-color: lightblue;
+}
+
+.Block * {
+    display: block;
+    background-color: lightblue;
+}
+
+.Inline-Blocks h1{
+    background-color: lightblue;
+}
+
+.parent *{
+    display: inline-block;
+    border: 2px solid black;
+    margin: 35px;
+}
+
+.siblings:nth-of-type(1){
+    background-color: rgb(6, 255, 6);
+}
+
+.siblings:nth-of-type(2){
+    background-color:rgb(70, 178, 70);
+}
+.siblings:nth-of-type(3){
+    background-color: rgb(96, 238, 96);
+}

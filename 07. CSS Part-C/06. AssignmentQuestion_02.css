@@ -1,0 +1,10 @@
+.siblings{
+    text-align: center;
+    display: inline-block;
+    margin: 20px;
+    background-color: pink;
+    height: 100px;
+    width: 100px;
+    border:2px solid black;
+    border-radius: 50%;
+}

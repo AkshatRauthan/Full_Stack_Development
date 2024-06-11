@@ -1,0 +1,36 @@
+.parent1 {
+    height: 200px;
+    width: 200px;
+    border: 2px solid black;
+    background-color: blueviolet;
+    font-size: 20px;
+    padding: 15px;
+}
+
+.sibling1 {
+    height: 100px;
+    width: 100px;
+    background-color:   cornflowerblue;
+    font-size: 0.5em;
+    /* Half The Font Size Of The Parent Element */
+    padding: 1em;
+    /* Sets The Padding To The Font Size (Which If 0.5em or 15px) */
+}
+
+.parent2 {
+    height: 300px;
+    width: 300px;
+    border: 2px solid black;
+    background-color: blueviolet;
+    font-size: 40px;
+    padding: 20px;
+}
+
+/* In Nested Elements em Statement Will Continuosly Reduce / Incerase The Value Of Property. */
+/* While Rem Will Not As Rem Is Relative To Root. */
+
+.sibling2 {
+    height: 2000px;
+    width: 200px;
+    font-size: 0.7rem;
+}

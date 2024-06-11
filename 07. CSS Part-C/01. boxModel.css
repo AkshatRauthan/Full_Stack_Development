@@ -1,0 +1,38 @@
+div {
+    text-align: center;
+
+    /* Sets The Height And Width Of The Content Area Bestides The Padding And Margin. */
+    /* height: 150px;  */
+    width: 500px;
+    background-color: lightgreen;
+
+    /*  Insert Empty Spaces Between Conatainer Border And The Contents.  */
+    padding: 3px 5px 3px 5px;
+
+    /* Sets The Border For The Outer Lining Of The Container. */
+    border-width: 3px;
+    border-style: solid;
+    border-color: darkgreen;
+
+    /*  Sets Diffrent Styles For Diffrent Borders In Box  */
+    border-left:3px dashed darkblue; /* Shortcut For Applying Border  */ 
+
+    /*  Applying Circular Corners To The Border  */
+    border-radius: 2px;
+
+    /*  Applying CSS On Particular Corners  */
+    border-top-right-radius: 25px;
+    border-bottom-left-radius: 25px;
+
+    /*  Inserting Space Between Diffrent Boxes  */
+    margin: 0px 0px 25px 0px;  /* Shorthands Same As That Of Padding. */
+
+}
+
+
+#div2 {
+    /* Conveting Box Into Circle */
+    height:300px;
+    width:300px; /* If Height And Wigth Are Not Same An Oval Will Be Created */
+    border-radius: 50%;
+}
