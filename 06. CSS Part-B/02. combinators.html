@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Combinators In HTML</title>
+    <link rel="stylesheet" href="02. combinators.css">
+</head>
+
+<!--
+#  The Most Commmonly Used Combinators Are : 
+#  A) Descendant Combinators : They Are Used To Define Styling For Multi-Level Descendants Of A Parent Element Across The Page.
+#
+#  B) Adjacent Sibling Combinator : They Are Used To Define Styling For A Particular Element Across The Page Using A Combination
+#     Of The Same-Level Element Present Before Them Along With Them Joined With A "+" Symbol.
+#     For ex : p + h3 {}
+#     This Will Define Styling For h3 Tag Present Just After A Paragraph Tab.
+#
+#  C) Child Combinators : They Are Used To Define Styling For All The Direct Descendants Of Elements Of A Particular Type
+#     Across The Page. Here The Parnet And Child Are Saperated Using ">" Symbol.
+#     For ex : span > button {}
+#     This Will Select All The Buttons That Are Directly Present Inside All The Span Tags Present On The Page.1
+#
+#  D) 
+-->
+
+<body>
+
+    <header>
+        <h1>
+            Quora 
+            <button id="login">Log in</button>
+            <button id="signup">Sign up</button>
+        </h1>
+
+        <div>
+            <input type="text" placeholder="username">
+            <input type="password" placeholder="password">
+        </div>
+
+        <nav>
+            <ul>
+                <li><a href="/home">Home</a></li>
+                <li><a href="/following">Following</a></li>
+                <li><a href="/answer">Answer</a></li>
+                <li><a href="/spaces">Spaces</a></li>
+            </ul>
+        </nav><hr>
+    </header>
+
+    <main>
+        <p class="post">
+            Adam &nbsp;&nbsp;
+            <a class="follow" href="/adam">Follow /abc</a></span>
+        </p>
+        <h3>What is the highest salary for a spacex engineer?</h3>
+        <span>
+            <button class="upvote">+upvote</button>
+            <button class="answer">answer</button>
+        </span><hr>
+
+        <p class="post">
+            Bob &nbsp;&nbsp;
+            <a class="follow" href="/bob">Follow xyz</a>
+        </p>
+        <h3>What is the syllabus for JEE 2024?</h3>
+        <span>
+            <button class="upvote">+upvote</button>
+            <button class="answer">answer</button>
+        </span><hr>
+
+        <p class="post">
+            Catlyn &nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="follow" href="/catlyn">Follow pqr</a>
+        </p>
+        <h3>Why is the sky blue?</h3>
+        <span>
+            <button class="upvote">+upvote</button>
+            <button class="answer">answer</button>
+        </span><hr>
+
+        <p class="post">
+            Dan &nbsp;&nbsp;&nbsp;&nbsp;
+            <a class="follow" href="/dan">Follow pqr</a>
+        </p>
+        <h3>Why is the sky blue?</h3>
+        <span>
+            <button class="upvote">+upvote</button>
+            <button class="answer">answer</button>
+        </span><hr>
+    </main>
+
+</body>
+
+</html>

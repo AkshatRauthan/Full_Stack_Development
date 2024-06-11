@@ -1,0 +1,46 @@
+/* Implementing Universal Selectors */
+*{
+    background-color: lightgrey;
+}
+
+/* Implementing Element Selectors */
+h1, h3 {
+    color:#b92b27;
+}
+
+/* Implementing ID Seletors */
+#login, #signup {
+    background-color: #b92b27;
+    border-color: #b92b27;
+    color:white;
+}
+
+/* Implementing Class Selector */
+.upvote, .answer {
+    background-color: #b92b27;
+    border-color: #b92b27;
+    color:white;
+}
+
+.follow {
+    text-decoration: none;
+    color: #c8413d;
+}
+
+.navlist {
+    color:#b52a25;
+}
+
+.navlistItems{
+    text-decoration: none;
+    color: #c8413d;
+}
+
+/* Implementing Attribute Selector */
+input[type="text"]{
+    background-color: yellowgreen;
+}
+
+input[type="password"]{
+    background-color:lightblue;
+}

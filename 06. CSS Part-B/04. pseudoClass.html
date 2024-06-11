@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo Classes In HTML</title>
+    <link rel="stylesheet" href="04. pseudoClass.css">
+</head>
+
+<!--
+#  Pseudo Classes : A Keyword Added To Selectors That Specify A Special State Of The Selected Elements.
+#
+#  A) Hover : This Pseudo Class Is Used To Apply Special Formatting To Elements That Is Shown When We Hover Over Them.
+#  B) Active : This Pseudo Class Is Used To Apply Special Formatting To Elements When They Are Present In Their Active State.
+#  C) Checked : Used To Change The Styling Of Radio Buttons Checkboxes When They Are In Checked State.
+#  D) Nth Of Type : Used To Apply Styling To Certain Elements Present On Specific Number Or Pattern.
+-->
+
+<body>
+    <header>
+        <h1>
+            Quora 
+            <button id="login">Log in</button>
+            <button id="signup">Sign up</button>
+        </h1>
+
+        <div>
+            <input type="text" placeholder="username">
+            <input type="password" placeholder="password">
+        </div>
+
+        <nav>
+            <ul class="navlist">
+                <li><a href="/home" class="navlistItems">Home</a></li>
+                <li><a href="/following" class="navlistItems">Following</a></li>
+                <li><a href="/answer" class="navlistItems">Answer</a></li>
+                <li><a href="/spaces" class="navlistItems">Spaces</a></li>
+            </ul>
+        </nav><hr>
+    </header>
+
+    <main>
+        <div id="division">
+            <p class="post">
+                Adam &nbsp;&nbsp;
+                <a class="follow" href="/adam" class="follow">Follow /abc</a></span>
+            </p>    
+            <h3>What is the highest salary for a spacex engineer?</h3>
+            <span>
+                <button class="upvote">+upvote</button>
+                <button class="answer">answer</button>
+            </span><hr>
+        </div>
+
+        <div id="division">
+            <p class="post">
+                Bob &nbsp;&nbsp;
+                <a class="follow" href="/bob" class="follow">Follow xyz</a>
+            </p>
+            <h3>What is the syllabus for JEE 2024?</h3>
+            <span>
+                <button class="upvote">+upvote</button>
+                <button class="answer">answer</button>
+            </span><hr>
+        </div>
+
+        <div id="division">
+            <p class="post">
+                Catlyn &nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="follow" href="/catlyn" class="follow">Follow pqr</a>
+            </p>
+            <h3>Why is the sky blue?</h3>
+            <span>
+                <button class="upvote">+upvote</button>
+                <button class="answer">answer</button>
+            </span><hr>
+        </div>
+
+        <div id="division">
+            <p class="post">
+                Dan &nbsp;&nbsp;&nbsp;&nbsp;
+                <a class="follow" href="/dan" class="follow">Follow pqr</a>
+            </p>
+            <h3>Why is the sky blue?</h3>
+            <span>
+                <button class="upvote">+upvote</button>
+                <button class="answer">answer</button>
+            </span><hr>
+        </div>
+
+        <div>
+            <h3>Agree Or Not : </h3>
+            <input type="radio" id="Yes" name="agreement">
+            <label for="Yes">Yes</label>&nbsp;
+            <input type="radio" id="No" name="agreement">
+            <label for="Yes">No</label>&nbsp;
+        </div><hr>
+    </main>
+
+</body>
+
+</html>

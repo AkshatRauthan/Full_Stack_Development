@@ -1,0 +1,57 @@
+*{
+    background-color: lightgrey;
+}
+
+h1, h3 {
+    color:#b92b27;
+}
+
+#login, #signup {
+    background-color: #b92b27;
+    border-color: #b92b27;
+    color:white;
+}
+
+.upvote, .answer {
+    background-color: #b92b27;
+    border-color: #b92b27;
+    color:white;
+}
+
+.follow {
+    text-decoration: none;
+    color: #c8413d;
+}
+
+.navlist {
+    color:#b52a25;
+}
+
+.navlistItems{
+    text-decoration: none;
+    color: #c8413d;
+}
+
+input[type="text"]{
+    background-color: yellowgreen;
+}
+
+input[type="password"]{
+    background-color:lightblue;
+}
+
+.heading::first-letter{
+    color:black;    
+}
+
+.closing::first-line{
+    color: #b52a25;
+    font-size: x-large;
+    font-weight: 900;
+    text-align: center;
+    background-color:darkgray;
+}
+
+*::selection {
+    background-color: limegreen;
+}

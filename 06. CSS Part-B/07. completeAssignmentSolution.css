@@ -1,0 +1,54 @@
+/*                                     .........Part A - Selectors...............                */
+
+/* Question 01 */
+#mainTopic {
+    color:blue;
+}
+
+/* Question 02 */
+* {
+    text-align: center;
+}
+
+/* Question 03 */
+h1, h3, h5 {
+    font-family:Georgia;
+}
+
+/* Question 04 */
+.paragraph {
+    color:white;
+    background-color: cornflowerblue;
+}
+
+/*  Question 05  */
+div button{
+    background-color: rgb(157, 34, 157);
+    color: azure;
+}
+
+
+
+/*                               .........Part A - Pseudo Classes ANd Elements...............                */
+
+/*  Question 06  */
+button:hover{
+    background-color: yellow;
+    color: blue;
+}
+
+/*  Question 07  */
+p:nth-of-type(2n-1) {
+    background-color: rgb(223, 223, 45);
+}
+
+/*  Question 08  */
+h1::first-letter{
+    color:red;
+}
+
+/*  Question 09 */
+#yes:checked+label{
+    color:darkgreen;
+    font-weight: 800;
+}

@@ -1,0 +1,30 @@
+/* Implementing Descendant Selectors */
+.post a {
+    text-decoration: none;
+    color: #c8413d;
+}
+
+nav ul a {
+    text-decoration: none;
+    color: #c8413d;
+}
+nav ul {
+    color:#a2100b;
+}
+
+/* Implementing Adjacent Sibling Combinators */
+p + h3 {
+    color:#b92b27;
+}
+
+/* Implementating Child Combinators */
+span > button {
+    background-color: #b92b27;
+    border-color: #b92b27;
+    color: #fff;
+}
+
+div > input{
+    background-color: #e88581;
+    color:white;
+}

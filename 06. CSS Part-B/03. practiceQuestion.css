@@ -1,0 +1,37 @@
+*{
+    background-color: lightgrey;
+}
+
+h1, h3 {
+    color:#b92b27;
+}
+
+#login, #signup {
+    background-color: #b92b27;
+    border-color: #b92b27;
+    color:white;
+}
+
+.upvote, .answer {
+    background-color: #b92b27;
+    border-color: #b92b27;
+    color:white;
+}
+
+.follow {
+    text-decoration: none;
+    color: #c8413d;
+}
+
+.navlist {
+    color:#b52a25;
+}
+
+.navlistItems{
+    text-decoration: none;
+    color: #c8413d;
+}
+
+.myId p {
+    background-color: green;
+}
