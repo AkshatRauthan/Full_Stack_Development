@@ -1,0 +1,57 @@
+.main, .main1{
+    background-color: lightgray;
+    display: flex;
+    justify-content:space-around;
+    width: 100%;
+}
+
+div {
+    height: 200px;
+    width: 200px;
+}
+
+.main div:nth-of-type(1){
+    background-color: rgba(255, 0, 0, 0);
+}
+
+.main div:nth-of-type(2){
+    background-color: rgba(255, 0, 0, 0.2);
+}   
+
+.main div:nth-of-type(3){
+    background-color: rgba(255, 0, 0, 0.5);
+}   
+
+.main div:nth-of-type(4){
+    background-color: rgba(255, 0, 0, 0.7);
+}   
+
+.main div:nth-of-type(5){
+    background-color: rgba(255, 0, 0, 1);
+}   
+
+
+.main1 div:nth-of-type(1){
+    background-color: rgb(255, 0, 0);
+    opacity: 0;
+}
+
+.main1 div:nth-of-type(2){
+    background-color: rgb(255, 0, 0);   
+    opacity: 0.3;
+}   
+
+.main1 div:nth-of-type(3){
+    background-color: rgb(255, 0, 0);
+    opacity: 0.5;
+}   
+
+.main1 div:nth-of-type(4){
+    background-color: rgb(255, 0, 0);
+    opacity: 0.7;
+}   
+
+.main1 div:nth-of-type(5){
+    background-color: rgb(255, 0, 0);
+    opacity: 1;
+}   

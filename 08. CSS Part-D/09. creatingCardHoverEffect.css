@@ -1,0 +1,39 @@
+.container {
+    text-align: center;
+}
+
+.card {
+    display: inline-block;
+    border: 2px solid black;
+    height: 290px;
+    width: 190px;
+    margin: 50px;
+    border-radius: 8px;
+    box-shadow: 0px 6px 8px black;
+    transition: 0.5s;
+}
+
+#man:hover {
+    box-shadow: 4px 12px 16px rgb(125, 66, 179);
+}
+
+#woman:hover {
+    box-shadow: 4px 12px 16px rgb(16, 186, 169);
+}
+
+.contents {
+    text-align: center;
+}
+
+img {
+    height: 200px;
+    width: 100%;
+}
+
+img[alt="man"]{
+    background-color: rgb(125, 66, 179);
+}
+
+img[alt="woman"]{
+    background-color: rgb(16, 186, 169);
+}

@@ -1,0 +1,29 @@
+.box {
+    height: 80px;
+    width: 120px;
+    background-color: greenyellow;
+    text-align: center;
+    border: 3px solid black;
+    margin: 20px;
+}
+
+#static{
+    position: static;
+}
+
+#relative{
+    position: relative;
+}
+
+#absolute {
+    position: absolute;
+}
+
+#fixed {
+    position:fixed;
+}
+
+.box:hover {
+    top : 200px;
+    left: 200px;
+}

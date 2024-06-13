@@ -1,0 +1,30 @@
+.parent{
+    margin-top: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.child{
+    width: 200px;
+    height: 50px;
+    text-align: center;
+    background-color: #7aa874;
+    border: 2px solid black;
+    margin: 10px;
+}
+
+.child:nth-of-type(2n){
+    background-color: #f7db6a;
+}
+
+.child:nth-of-type(3n){
+    background-color: #ebb02d;
+}
+
+/* Transform : Rotate */
+
+#one{
+    transform: rotate(-45deg);
+}

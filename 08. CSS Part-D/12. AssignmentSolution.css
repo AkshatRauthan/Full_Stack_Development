@@ -1,0 +1,48 @@
+#box1 {
+    width: 100px;
+    height: 100px;
+    background: green;
+}
+
+#box1:hover {
+    width: 600px;
+}
+    
+#box2 {
+    width: 100px;
+    height: 100px;
+    background: red;
+    }
+
+#box3 {
+    width: 100px;
+    height: 100px;
+    background: lightblue;
+}
+    
+#box4 {
+    width: 100px;
+    height: 100px;
+    background: lightgreen;
+}
+
+/* Answer 01 */
+#box1{
+    transition: width ease-in 2s;
+}
+
+/* Answer 02 */
+#box2 {
+    transform: translateX(200px) translateY(200px) rotate(90deg);
+}
+
+/* Answer 03 */
+#box3 {
+    transform: skewX(20deg);
+}
+
+/* Answer 04 */
+#box4 {
+    box-shadow: 2px 2px 5px green;
+}
+
