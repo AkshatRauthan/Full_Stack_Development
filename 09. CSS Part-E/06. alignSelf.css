@@ -1,0 +1,45 @@
+h1, h2 {
+    text-align: center;
+}
+
+.containerRow{
+    text-align: center;
+    height: 200px;
+    width: 90%;
+    background-color: rgb(109, 171, 171);
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+.containerRow div{
+    width: 50%;
+    height: 50%;
+    color: whitesmoke;
+}
+
+.containerCol {
+    text-align: center;
+    height: 600px;
+    width: 50%;
+    background-color: rgb(128, 157, 157);
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+.containerCol div {
+    height: 30%;
+    width: 50%;
+    color: whitesmoke;
+}
+
+div>div:nth-of-type(2n-1){
+    align-self: flex-start;
+}
+
+div>div:nth-of-type(2n){
+    align-self: flex-end;
+}

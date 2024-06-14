@@ -1,0 +1,59 @@
+*{
+    text-align: center;
+}
+
+#horizontal {
+    background-color: rgb(145, 236, 206);
+    height: 200px;
+    width: 80%;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+}
+
+#vertical {
+    background-color: rgb(145, 236, 206);
+    height: 416px;
+    width: 80%;
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+}
+
+#horizontal div {
+    width: 500px;
+}
+
+#vertical div {
+    height: 200px;
+}
+
+.child:nth-of-type(1){
+    background-color: red;
+}
+
+.child:nth-of-type(2){
+    background-color: orange;
+}
+
+.child:nth-of-type(3){
+    background-color: yellow;
+}
+
+.child:nth-of-type(4){
+    background-color: green;
+}
+
+.child:nth-of-type(5){
+    background-color: blue;
+}
+
+.child:nth-of-type(6){
+    background-color: indigo;
+}
+
+.child:nth-of-type(7){
+    background-color: violet;   
+}

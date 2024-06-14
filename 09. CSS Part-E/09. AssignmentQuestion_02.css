@@ -1,0 +1,19 @@
+.container {
+    height: 50px;
+    width: 900px;
+    background-color: lightpink;
+    border: 3px solid aquamarine;
+    font-size: 24px;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    padding-top: 15px;
+    margin: 20px auto;
+    border-radius: 15px;
+}
+
+.container div {
+    height: 50px;
+    width: 80px;
+    padding-left: 5px;
+}

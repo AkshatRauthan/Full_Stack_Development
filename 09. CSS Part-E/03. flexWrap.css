@@ -1,0 +1,45 @@
+h1, h2, h3 {
+    text-align: center;
+}
+
+.containerRow{
+    text-align: center;
+    height: 300px;
+    width: 80%;
+    background-color: rgb(109, 171, 171);
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+
+.containerRow div{
+    width: 50%;
+    color: whitesmoke;
+}
+
+.containerCol {
+    text-align: center;
+    height: 400px;
+    width: 80%;
+    background-color: rgb(128, 157, 157);
+    margin: 10px auto;
+    border: 2px solid black;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.containerCol div {
+    height: 40%;
+    color: whitesmoke;
+}
+
+#wrap {
+    flex-wrap: wrap;
+}
+
+#wrapReverse {
+    flex-wrap: wrap-reverse;
+}
