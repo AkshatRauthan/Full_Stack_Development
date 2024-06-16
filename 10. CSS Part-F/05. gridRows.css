@@ -1,0 +1,33 @@
+*{
+    text-align: center;
+    background-color: rgb(245, 152, 245);
+}
+
+hr {
+    height: 2px;
+    background-color: black;
+}
+
+.grid1 {
+    display: grid;
+    margin: 10px auto;
+    height: 400px;
+    width: 80%;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(4, 1fr);
+    gap: 4px;
+}
+
+.grid1>div{
+    border: 1px solid lightseagreen;
+    background-color:aquamarine;
+}
+
+.grid1>div:nth-of-type(1){
+    grid-row-start: 1;
+    grid-row-end: 5;
+}
+
+.grid1>div:nth-of-type(10){
+    grid-row: 3/5;
+}

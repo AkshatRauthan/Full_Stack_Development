@@ -1,0 +1,40 @@
+@keyframes increaseSize {
+    0% {
+        font-size: 20px;
+        background-color: pink;
+        opacity: 0%;
+    }
+
+    50%{
+        font-size: 30px;
+        background-color: pink;
+        opacity: 50%;
+    }
+
+    100% {
+        font-size: 40px;
+        background-color: pink;
+        opacity: 100%;
+    }
+}
+
+.container {
+    margin: 10px auto;
+    border: 3px solid black;
+    height: 60px;
+    width: 600px;
+    text-align: center;
+    padding: 25px;
+
+    animation-name: increaseSize;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+    animation-timing-function: linear;
+}
+
+
+/*
+    Shorthand : 
+    animation : AnimationName duration timing-function delay count directin
+ */

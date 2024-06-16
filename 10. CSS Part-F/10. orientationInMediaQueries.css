@@ -1,0 +1,15 @@
+@media (orientation : landscape){
+    .container {
+        background-color: rgb(255, 95, 122);
+        text-align: center;
+        color: white;
+    }
+}
+
+@media (orientation : portrait){
+    .container {
+        background-color: rgb(52, 148, 181);
+        text-align: center;
+        color: white;
+    }
+}

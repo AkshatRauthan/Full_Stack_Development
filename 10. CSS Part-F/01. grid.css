@@ -1,0 +1,17 @@
+* {
+    text-align: center ;
+}
+
+.container{
+    width: 600px;
+    height: 300px;
+    background-color: rgb(93, 254, 254);
+    display: grid;
+}
+
+.item{
+    width: 100px;
+    height: 50px;
+    background-color: greenyellow;
+    border: 2px solid black;
+}

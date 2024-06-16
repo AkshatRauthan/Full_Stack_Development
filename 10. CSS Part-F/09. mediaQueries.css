@@ -1,0 +1,35 @@
+h1{
+    text-align: center;
+}
+
+@media(width : 400px){
+    .containerEqual{
+        background-color: #1eb5b5;
+        text-align: center;
+        color: white;
+    }
+}
+
+@media(min-width : 400px){
+    .containerMin{
+        background-color: #158d8d;
+        text-align: center;
+        color: white;
+    }
+}
+
+@media(max-width : 400px){
+    .containerMax{
+        background-color: #136868;
+        text-align: center;
+        color: white;
+    }
+}
+
+@media(min-width : 300px) and (max-width : 500px){
+    .containerRange{
+        background-color: #164747;
+        text-align: center;
+        color: white;
+    }
+}

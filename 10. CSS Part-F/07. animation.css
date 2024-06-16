@@ -1,0 +1,36 @@
+@keyframes increaseSize {
+    from {
+        font-size: 20px;
+        background-color: aqua;
+    }
+    to {
+        font-size: 40px;
+        background-color: rgb(135, 176, 162);
+    }
+}
+
+.container {
+    margin: 10px auto;
+    border: 3px solid black;
+    height: 60px;
+    width: 400px;
+    text-align: center;
+
+    /* animation : increaseSize 5s linear 0s infinite alternate */
+    
+    /* Important To Declare */
+    animation-name: increaseSize;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+
+    /* Optional */
+    animation-timing-function: linear;
+    animation-delay: 0.3ms;
+}
+
+
+/*
+    Shorthand : 
+    animation : AnimationName duration timing-function delay count directin
+ */

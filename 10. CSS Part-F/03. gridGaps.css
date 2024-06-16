@@ -1,0 +1,33 @@
+*{
+    text-align: center;
+    background-color: rgb(245, 152, 245);
+}
+
+hr {
+    height: 2px;
+    background-color: black;
+}
+
+.grid1 {
+    display: grid;
+    height: 100px;
+    width: 100%;
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr);
+    row-gap: 2px;
+}
+
+.grid1>div, .grid2>div {
+    border: 1px solid lightseagreen;
+    background-color:aquamarine;
+}
+
+.grid2{
+    column-gap: 2px;
+    row-gap: 2px; 
+    display: grid;
+    height: 200px;
+    width: 100%;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+}

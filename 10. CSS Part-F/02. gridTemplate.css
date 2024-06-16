@@ -1,0 +1,34 @@
+*{
+    text-align: center;
+}
+
+hr {
+    height: 2px;
+    background-color: black;
+}
+
+.grid1 {
+    display: grid;
+    height: 100px;
+    width: 100%;
+    /* Method 1 Of Declaration : Identical Boxes. */
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-columns: repeat(3, 1fr); 
+    
+}
+
+.grid1>div, .grid2>div {
+    border: 1px solid lightseagreen;
+    background-color:aquamarine;
+}
+
+/* fr Means : Fraction Of Width. */
+
+.grid2{
+    display: grid;
+    height: 200px;
+    width: 100%;
+    /* Method 2 Of Declaration : FOrmation Of Rows Or Columns In A Ratio.*/
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 2fr 2fr 1fr;
+}

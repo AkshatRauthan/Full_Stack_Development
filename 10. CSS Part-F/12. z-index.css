@@ -1,0 +1,37 @@
+*{
+    text-align: center;
+    background-color: rgb(238, 126, 238);
+}
+
+.parent{
+    width: 150px;
+    height: 225px;
+    position:absolute;
+    transform: translate(50%, 50%);
+    border: 2px solid black;
+    border-radius: 15px;
+}
+
+.parent:nth-of-type(1){
+    rotate: -10deg;
+    background-color: rgb(81, 246, 81);
+    z-index: -1;
+}
+
+.parent:nth-of-type(2){
+    rotate: -20deg;
+    background-color: lightskyblue;
+    z-index: -2;
+}
+
+.parent:nth-of-type(3){
+    rotate: -30deg;
+    background-color: lightsalmon;
+    z-index: -3;
+}
+
+.parent:nth-of-type(4){
+    rotate: -40deg;
+    background-color: lightgoldenrodyellow;
+    z-index: -4;
+}
