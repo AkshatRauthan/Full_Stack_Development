@@ -1,0 +1,20 @@
+* {
+    text-align: center;
+}
+
+hr {
+    width: 90%;
+    margin: 0px auto;
+}
+
+.container {
+    display: flex;
+    width: 85%;
+    justify-items: space-evenly;
+}
+
+#alert{
+    width: 100%;
+    margin: 5px;
+    align-self: center;
+}
