@@ -1,0 +1,329 @@
+/* Defining Basic Layout Of The Page */
+
+* {
+    text-decoration: none;
+    color:#fff;
+    font-size: 16px;
+}
+
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+
+body {
+    background-color: white;
+    font-family: 'Montserrat', sans-serif;
+    color: #fff;
+    background-color: #000;
+    overflow: hidden;
+}
+
+.main{
+    display: flex;
+    height: 100vh;
+}
+
+.sidebar {
+    background-color: #000;
+    height: 100vh;
+    width: 370px;
+    display: flex;
+    flex-direction: column;
+    margin: 0.5rem;
+}
+
+.contents {
+    background-color: #121212;
+    border-radius: 1rem;
+    height: 100vh;
+    flex:1;
+    overflow: auto;
+    padding: 0 1.5rem;
+}
+
+.controls {
+    background-color: #000;
+    height: 72px;
+    width: 100vw;
+    position: fixed;
+    bottom: 0px;
+    display: flex;
+}
+
+/* Defining CSS For Upper Sidebar */
+
+.nav {
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    border-radius: 1rem;
+    justify-content: space-around;
+    height: 100px;
+    padding: 0.5rem 0.75rem;    
+}
+
+.nav-option {
+    padding: 0.5rem 0.75rem;
+    opacity: 0.7;
+}
+
+.nav-option:hover {
+    opacity: 1;
+}
+
+.nav a {
+    line-height: 1.5rem;
+    margin-left: 1rem;
+}
+
+.nav i {
+    font-size: 1.25rem;
+}
+
+/* Defining CSS For Library In Sidebar */
+
+.library{
+    display: flex;
+    flex-direction: column;
+    background-color: #121212;
+    border-radius: 1rem;
+    padding: 0.5rem 0.75rem;
+    margin-top: 0.75rem;
+    height: 100vh;
+    margin-top: 1rem;
+}
+
+.option {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+}
+
+.option img {
+    height: 1.25rem;
+    width: 1.25rem;
+}
+
+.option a {
+    margin-left: 1rem;
+}
+
+.lib-option-nav-option {
+    padding: 0.5rem 0.75rem;
+    opacity: 0.7;
+}
+
+.lib-option-nav-option:hover {
+    opacity: 1;
+}
+
+.icons {
+    display: flex;
+    font-size: 1.25rem;
+    margin: auto 0px;
+}
+
+.icons i {
+    opacity: 0.7;
+    padding-right: 0.75rem;
+}
+
+.icons i:hover {
+    opacity: 1;
+}
+
+.box{
+    background-color: #232323;
+    margin: 0.5rem 0 1rem 0;
+    padding: 0.5rem 1rem;
+    border-radius: 0.75rem;
+}
+
+.box-p1 {
+    font-size: 1rem;
+    font-weight: 500;
+}
+
+.box-p2 {
+    font-size: 0.75rem;
+    opacity: 0.9;
+}
+
+.badge {
+    border-radius: 100px;
+    color: black;
+    font-weight: 700;
+    padding: 0.25rem 1rem;
+    margin-bottom: 0.5rem;
+    margin-top: 0.5rem;
+    width: fit-content;
+    border: none;
+    height: 2rem;
+}
+
+/* Styling Of Contents */
+
+.sticky-nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0;
+}
+
+.sticky-nav * {
+    margin: auto 0;
+}
+
+.nav-item, .dark-button{
+    background-color: #fff;
+    color:#000;
+    border-radius: 100px;
+    font-weight: 700;
+    font-size: 1rem;
+    width: 10rem fit-content;
+    height: 2.25rem;
+    padding: 0 .75rem 0 0.75rem;
+    border: none;   
+    margin: 0.25rem 0.75rem 0 0;
+}
+
+.dark-button {
+    background-color: #000;
+    color: white;
+}
+
+h1 {
+    font-size: x-large;
+}
+
+.card {
+    width: 11rem;
+    height: 18rem;
+    padding: 1rem;
+    margin-left: 1.5em;
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.card img {
+    border-radius: 0.3rem;
+    width: 100%;
+}
+
+.card .card-title {
+    font-weight: 600;
+    font-size: 18px;
+}
+
+.card .card-info {
+    font-size: small;
+    opacity: 0.7;
+    font-size: 14px;
+}
+
+.cards-container {
+    display: flex;
+    flex-wrap:wrap;
+}
+
+hr{
+    width: 90%;
+    opacity: 0.3;
+    position: inherit;
+}
+
+.crd-img {
+    height: 4rem;
+}
+
+.head h2{
+    padding: 0.5rem;
+    font-size: 18px;
+    line-height: 4rem;
+}
+
+.head:hover{
+    opacity: 0.7;
+}
+
+.albums {
+    display: flex;
+    align-items: center;
+    align-self: left;
+    width: 25%;
+    justify-content: center;
+}
+
+.player {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.player-icons {
+    display: flex;
+    justify-content: space-between;
+    width: 40%;
+    align-items: center;
+}
+
+.sub-icon {
+    height: 1.25rem;
+    width: 1,25rem;
+    opacity: 0.7;
+}
+
+.sub-icon:hover{
+    opacity: 1;
+}
+
+.main-icon {
+    height: 2rem;
+    width: 2rem;
+}
+
+.playback-bar {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.progress-bar {
+    width: 70%;
+    height: 3px;
+    border-radius: 100px;
+    appearance: none;
+    accent-color: rgb(68, 229, 68);
+    cursor: pointer;
+}
+
+.mini-controls {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 2rem;
+    position: absolute;
+    bottom: -2.1rem;
+    right: 1rem;
+    padding: 2rem; 
+}
+
+.mini-progress-bar{
+    height: 3px;
+    border-radius: 100px;
+    appearance: none;
+    accent-color: white;
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.4);
+    width: 30%;
+    transform: translateY(-0.rem);
+}
+
+.mini-controls i {
+    font-size: 1.25rem;
+}
