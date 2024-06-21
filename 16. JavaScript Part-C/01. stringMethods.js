@@ -13,6 +13,7 @@ console.log(a+"\n");
 a = a.toLowerCase();
 console.log(a+"\n");
 
+
 // indexOf : 
 console.log(a.indexOf("lan"));
 console.log(a.indexOf("Alan") + "\n");
