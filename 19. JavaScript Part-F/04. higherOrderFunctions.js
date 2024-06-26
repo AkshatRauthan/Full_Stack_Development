@@ -1,5 +1,4 @@
 // Higher Order Functions : These Functions Return Another An Function Based On Its argument.
-
 function isOdd(n){
     if (n%2) console.log(`Yes, ${n} Is An Odd Number.\n`);
     else console.log(`No, ${n} Is Not An Odd Number.\n`);
