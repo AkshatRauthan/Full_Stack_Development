@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Extracting Form Data</title>
+    <style>
+        h1{
+            margin-top: 25vh;
+            text-align: center;
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        input{
+            text-align: center;
+            width: 20vw;
+            margin: 5px auto;
+            height: 5vh;
+            font-size: large;
+        }
+        span *, span{
+            text-align: center;
+            margin: 5px;
+            height: 5vh;
+        }
+    </style>
+</head>
+<body>
+    <h1> Fill The Details To Register</h1>
+    <form action="#">
+        <input type="text" placeholder="Enter Your Name" id="userName" name="User Name">
+        <input type="number" placeholder="Enter Your Age" id="age" name="Age">
+        <input type="password" placeholder="Enter Your Password" id="password" name="Password">
+        <span>
+            <button type="submit"> Submit The Form </button>
+            <button type="reset"> Reset The Form</button>
+        </span>
+    </form>
+    <script src="10. extractingFormData.js"></script>
+</body>
+</html>
