@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubbling In JS</title>
+<body>
+    <h1>Div With Event Bubbling</h1>
+    <div class="box" >
+        <ul class="with-bubbling">
+            <li class="with-bubbling"> Item One </li>
+            <li class="with-bubbling"> Item Two</li>
+            <li class="with-bubbling"> Item Three </li>
+        </ul>
+    </div>
+
+    <h1>Div Without Event Bubbling</h1>
+    <div class="box">
+        <ul class="without-bubbling">
+            <li class="without-bubbling"> Item One </li>
+            <li class="without-bubbling"> Item Two</li>
+            <li class="without-bubbling"> Item Three </li>
+        </ul>
+    </div>
+
+    <script src="01. eventBubbling.js"></script>
+</body>
+</html>
