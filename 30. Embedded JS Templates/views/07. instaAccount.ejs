@@ -1,0 +1,16 @@
+<%- include("includes/07. headSubtemplate.ejs") %>
+<body style="text-align: center;">
+    <h1> This is The Instagram Account Of @<%= data.name %>  </h1>
+    <button>Follow  @<%= data.name %></button>&nbsp; &nbsp;<button>Message @<%= data.name %></button>
+    <p> Followers : <%= data.followers %> &nbsp;&nbsp;&nbsp;&nbsp; Following : <%= data.following %> </p>
+    <hr style="background-color: black; height: 3px; width: 85vw;">
+    <h2>All The Posts Of @<%= data.name %> Are :  </h2>
+    <%
+    for (post of data.posts){ %>
+        <hr style="background-color: black; height: 1.75px; width: 65vw;">
+        <br><br><img src="<%= post.image %>" alt="Post Image" style="height: 300px; width: 300px;"><br>
+        <button> Like </button>&nbsp; &nbsp;<button> Comment </button>
+        <p> Likes : <%= post.likes %> &nbsp;&nbsp;&nbsp;&nbsp; Comments : <%= post.comments %> </p>
+    <% } %>
+</body>
+</html>

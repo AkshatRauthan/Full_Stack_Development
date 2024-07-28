@@ -1,0 +1,47 @@
+{
+    "cats": {
+        "name" : "Cat",
+        "followers" : 2500,
+        "following" : 250,
+        "posts" : [
+            {
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTgpoyH5qAYxfU4jvqnYPTQxsa8KdoQMNQxNw&s",
+                "likes" : 279,
+                "comments" : 54
+            },
+            {
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSIBvc6GVZc4rxXOl0l0pG5fsF42RL80VbSkQ&usqp=CAU",
+                "likes" : 987,
+                "comments" : 674
+            },
+            {
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSyhM9MikBYtZQu_hirIrItd2LOIeAbj-4KfA&usqp=CAU",
+                "likes" : 345,
+                "comments" : 27
+            }
+        ]
+    },
+
+    "dogs" : {
+        "name" : "Dog",
+        "followers" : 7496,
+        "following" : 546,
+        "posts" : [
+            {
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR5OE8hmhzSIUEfj4marKRFtLYAl7-AmLd4bw&usqp=CAU",
+                "likes" : 854,
+                "comments" : 534
+            },
+            {
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSaH_GB7LL_1LC3slExuq1Cdc5vB4uQrr8XAg&usqp=CAU",
+                "likes" : 1265,
+                "comments" : 753
+            },
+            {
+                "image" : "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR2xImFPbH3dd23uyP3Gx1wOiS7UyP5gpuI_Q&usqp=CAU",
+                "likes" : 3454,
+                "comments" : 345
+            }
+        ]
+    }
+}

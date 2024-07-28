@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roll Dice</title>
+</head>
+<body style="text-align: center">
+    <h1 style="margin-top: 8vh; margin-bottom: 2vh;"> This Is The Home Page Of The Website</h1>
+    <hr style="background-color: black; height: 3px; width: 85vw;">
+    <% let diceVal = Math.floor( Math.random() * 6) + 1; %>
+    <h2>
+        The Number On Your Dice Is : 
+        <%= diceVal %>
+    </h2>
+    <% 
+        if (diceVal == 6){
+    %>
+    <h2> Nice Roll! Please Roll The Dice Again</h2>
+    <% } %>
+</body>
+</html>
