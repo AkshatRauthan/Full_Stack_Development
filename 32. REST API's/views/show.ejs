@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View Post</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h2> Here Is The Requested Post </h2>
+    <div class="post">
+        <p> Post ID : <%= id %> </p>
+        <h3 class="user"> @<%= username %> </h3>
+        <h3 class="content"> <%= content %> </h3>
+    </div>
+    <a href="/posts/<%=id%>/edit"><button>Edit Post</button></a><br><br>
+    <form action="/posts/<%= post.id %>?_method=DELETE" method="post"><button>Delete Post</button></form>
+</body>
+</html>
