@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Username</title>
+    <style>
+        *{
+            text-align: center;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <% result = result[0] %>
+    <h1> You Are About To Edit Your Details</h1>
+    <p> User-Id : <%= result.ID %> </p>
+
+    <form action="/users/<%=result.ID%>?_method=PATCH" method="post">
+        <span>
+            <label for="Username"> Username : </label>
+            <input type="text" name="Username" placeholder="Enter New Username" value="<%= result.Username %>">
+        </span><br>
+
+        <br><span>
+            <label for="Email"> Email-ID : </label>
+            <input type="email" name="Email" placeholder="Enter New Email-Id" value="<%= result.Email %>">
+        </span><br>
+
+        <br><span>
+            <label for="Password"> Password :</label>
+            <input type="password" placeholder="Enter Your Password" name="Password">
+        </span><br>
+
+        <br><button>Edit Details</button>
+    </form>
+</body>
+</html>

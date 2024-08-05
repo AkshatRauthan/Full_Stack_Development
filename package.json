@@ -9,9 +9,11 @@
   "author": "Akshat",
   "license": "ISC",
   "dependencies": {
+    "@faker-js/faker": "^8.4.1",
     "axios": "^1.7.2",
     "ejs": "^3.1.10",
     "express": "^4.19.2",
+    "fs": "^0.0.1-security",
     "i": "^0.3.7",
     "method-overload": "^0.1.1",
     "method-override": "^3.0.0",

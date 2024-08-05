@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Updated Succesfully</title>
+    <style>
+        table{
+            text-align: center;  
+            margin: 10px auto;
+            border: 1px solid black;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 5px;
+        }
+        hr{
+            height: 1.75px;
+            width: 80vw;
+            margin: 0px auto;
+            background-color: black;
+        }
+    </style>
+</head>
+<body style="text-align: center;">
+    <h1>
+        User's Details Updated Succesfully!
+    </h1><hr><br>
+    <h3>The Updated Details Are Shown Below</h3>
+    <table>
+        <tr>
+            <th>ID</th>
+            <th>User-Name</th>
+            <th>Email</th>
+        </tr>
+
+        <tr>
+            <td> <%= ID %> </td>
+            <td> <%= Username %> </td>
+            <td> <%= Email %> </td>
+        </tr>
+    </table><br>
+    <a href="/users"><button>Home Page</button></a>
+</body>
+</html>

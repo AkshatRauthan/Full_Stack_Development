@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Data of All Users</title>
+    <style>
+        table{
+            text-align: center;  
+            margin: 10px auto;
+            border: 1px solid black;
+        }
+        td, th{
+            border: 1px solid black;
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <table> 
+        <tr>
+            <th>S. No.</th>
+            <th>ID
+            <th>User-Name</th>
+            <th>Email</th>
+            <th>Edit User</th>
+            <th>Delete User</th>
+        </tr>
+
+        <% let num = 1;
+        for(user of result){ %>
+            <tr>
+                <td> <%= num++ %> </td>
+                <td> <%= user.ID %> </td>
+                <td> <%= user.USERNAME %> </td>
+                <td> <%= user.EMAIL %> </td>
+                <td><form method="GET" action="/users/<%=user.ID%>/edit"> <button>Edit Me</button></form></td>
+                <td><form method="GET" action="/users/<%=user.ID%>/delete"> <button>Delete Me</button></form></td>
+            </tr>
+        <% } %>
+    </table>
+</body>
+</html>

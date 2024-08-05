@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Delete User</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        input{
+            width: 15vw;
+        }
+    </style>
+</head>
+<body>
+    <h2> Enter Your Password To Delete Your Account </h2>
+    ID : <%= ID %> <br><br>
+    <form method="POST" action="/users/<%=ID%>?_method=DELETE">
+        <label for="Password"> Password : </label>
+        <input type="password" placeholder=" Enter Your Password " name="Password"><br><br>
+        <button> Delete Account </button>
+    </form>
+</body>
+</html>
