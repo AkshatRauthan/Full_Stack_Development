@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create New Chat Entry</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        input {
+            width : 18vw;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enter The Details Of The New Chat Entry</h1>
+    <form action="/chats" method="post">
+        <label for="Username">Sender : </label>
+        <input type="text" placeholder="Enter Your Sender's Name " name="From"><br><br>
+
+        <label for="Message">Message : </label>
+        <input type="text" placeholder="Enter The Message " name="Message"><br><br>
+        
+        <label for="Receiver">Receiver : </label>
+        <input type="text" placeholder="Enter The Receiver's Name " name="To"><br><br>
+
+        <button type="reset">Reset</button> <button type="submit">Submit</button>
+    </form>
+</body>
+</html>

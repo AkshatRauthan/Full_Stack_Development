@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WanderLust</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h2>Create A New Listing</h2>
+    
+    <form action="/listings" method="post">
+
+        <div class="box">
+            <label for="">Title : </label>&nbsp;
+            <input type="text" name="listing[title]" placeholder="Enter The Title Of The Listing"><br><br>
+        </div>
+
+        <div id="description" class="box">
+            <label for="">Description : </label>&nbsp;&nbsp;
+            <textarea name="listing[description]" rows="4" cols="27" placeholder="Enter The Description"></textarea>
+        </div>
+
+        <!-- <div class="box">
+            <label for="">Image : </label>&nbsp;
+            <input type="text" name="listing[image]" placeholder="Enter The Title Of The Listing"><br><br>
+        </div> -->
+
+        <div class="box">
+            <label for="">Price : </label>&nbsp;
+            <input type="text" name="listing[price]" placeholder="Enter The Price Of The Listing"><br><br>
+        </div>
+
+        <div class="box">
+            <label for="">Area : </label>&nbsp;
+            <input type="text" name="listing[location]" placeholder="Enter The Location Of The Listing"><br><br>
+        </div>
+
+        <div class="box">
+            <label for="">Country : </label>&nbsp;
+            <input type="text" name="listing[country]" placeholder="Enter The Country of the Location"><br><br>
+        </div><br>  
+
+        <button type="submit">Submit</button>&nbsp;&nbsp;
+        <button type="reset">Reset</button> 
+    </form>
+</body>
+</html>

@@ -18,5 +18,7 @@ const User = mongoose.model("User", userSchema);
 const user1 = new User({Name : "Akshat", Email : "akshat1@gmail.com", Age : 20});
 const user2 = new User({Name :  "Alan",  Email : "alan123@gmail.com", Age : 19});
 
+// If You Will Add Aditional Fields That Are Absent In The Schema They Will Not Be Inserted.
+
 user1.save();
 user2.save();

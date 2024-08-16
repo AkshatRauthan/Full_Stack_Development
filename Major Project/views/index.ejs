@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>View All The Listings</title>
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <h2>All The Available Listings Are as Follows</h2>
+
+    <form action="/listings/new">
+        <label>Click To Add A New Listing &nbsp; : &nbsp; </label>
+        <button>Click me</button>
+    </form>
+
+    <ul>
+        <% for(listing of result){  %>
+            <li> <a href="/listings/<%= listing._id %>"> <%= listing.title %> </a> </li>
+        <% } %>
+    </ul><br>
+
+</body>
+</html>

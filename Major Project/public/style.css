@@ -1,0 +1,31 @@
+*{
+    text-align: center;
+}
+
+li{
+    margin: 0px auto;
+    width: max-content;
+}
+
+a{
+    text-decoration: none;
+}
+
+#description{
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+}
+
+.box{
+    width: 30vw;
+    margin: 0px auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.box input{
+    width: 23.25vw;
+}
