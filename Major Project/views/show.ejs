@@ -1,11 +1,5 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderLust</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
+<% layout('/layouts/boilerplate') %>
+
 <body>
     <h2>Listing Details :</h2><br>
     <ul>
@@ -17,8 +11,7 @@
     </ul>
 
     <form action="/listings/<%= listing._id %>?_method=DELETE" method="post">
-        <a href="/listings/<%= listing._id %>/edit"> <button type="button"> Edit </button> </a>
+        <a href="/listings/<%= listing._id %>/edit"><button type="button">Edit</button></a>
         <button type="submit"> Delete </button>
     </form>
 </body>
-</html>

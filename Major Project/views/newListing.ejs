@@ -1,48 +1,46 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WanderLust</title>
-    <link rel="stylesheet" href="/style.css">
-</head>
-<body>
-    <h2>Create A New Listing</h2>
+<% layout('/layouts/boilerplate') %>
+
+<body><br>
+    <h2>Create A New Listing</h2><br>
     
-    <form action="/listings" method="post">
+    <div class="col-8 offset-2">
 
-        <div class="box">
-            <label for="">Title : </label>&nbsp;
-            <input type="text" name="listing[title]" placeholder="Enter The Title Of The Listing"><br><br>
-        </div>
+        <form action="/listings" method="post">
+            <div class="mb-4">
+                <label class="form-label" for="listing[title]">Title : </label>&nbsp;
+                <input class="form-control" type="text" name="listing[title]" placeholder="Enter The Title Of The Listing">
+            </div>
 
-        <div id="description" class="box">
-            <label for="">Description : </label>&nbsp;&nbsp;
-            <textarea name="listing[description]" rows="4" cols="27" placeholder="Enter The Description"></textarea>
-        </div>
+            <div class="mb-4">
+                <label class="form-label" for="listing[description]">Description : </label>&nbsp;&nbsp;
+                <textarea class="form-control" name="listing[description]" rows="4" cols="27" placeholder="Enter The Description"></textarea>
+            </div>
 
-        <!-- <div class="box">
-            <label for="">Image : </label>&nbsp;
-            <input type="text" name="listing[image]" placeholder="Enter The Title Of The Listing"><br><br>
-        </div> -->
+            <div class="mb-4">
+                <label class="form-label" for="listing[image]">Image : </label>&nbsp;
+                <input class="form-control" type="text" name="listing[image]" placeholder="Enter The URL Of The Display Image">
+            </div>
 
-        <div class="box">
-            <label for="">Price : </label>&nbsp;
-            <input type="text" name="listing[price]" placeholder="Enter The Price Of The Listing"><br><br>
-        </div>
+            <div class="row">
+                <div class="mb-4 col-md-4">
+                    <label class="form-label" for="listing[price]">Price : </label>&nbsp;
+                    <input class="form-control" type="number" name="listing[image]" placeholder="The Price Per Night">
+                </div>
+    
+                <div class="mb-4 col-md-8">
+                    <label class="form-label" for="listing[location]">Location : </label>&nbsp;
+                    <input class="form-control" type="text" name="listing[location]" placeholder="Enter The Location Of The Listing">
+                </div>
+            </div>
 
-        <div class="box">
-            <label for="">Area : </label>&nbsp;
-            <input type="text" name="listing[location]" placeholder="Enter The Location Of The Listing"><br><br>
-        </div>
+            <div class="mb-4">
+                <label class="form-label" for="listing[country]">Country : </label>&nbsp;
+                <input class="form-control" type="text" name="listing[country]" placeholder="Enter The Country of the Location">
+            </div>  
 
-        <div class="box">
-            <label for="">Country : </label>&nbsp;
-            <input type="text" name="listing[country]" placeholder="Enter The Country of the Location"><br><br>
-        </div><br>  
+            <button class="btn btn-dark" type="submit">Add</button>&nbsp;&nbsp;
+            <button class="btn btn-dark" type="reset">Reset</button> 
+        </form><br><br>
 
-        <button type="submit">Submit</button>&nbsp;&nbsp;
-        <button type="reset">Reset</button> 
-    </form>
+    </div>
 </body>
-</html>

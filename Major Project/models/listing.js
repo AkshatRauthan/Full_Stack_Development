@@ -11,13 +11,10 @@ const listingSchema = new Schema({
     description : {
         type : String
     },
-    image : {
-        url : {
+    image :{
             type : String,
             set: (link) => link === "" ? defaultImage : link,
             default : defaultImage
-        },
-        filename : String
     },
     price : {
         type : Number
