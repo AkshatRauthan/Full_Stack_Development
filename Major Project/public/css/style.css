@@ -92,3 +92,18 @@ body{
 .show-img{
     height: 30vh !important;
 }
+
+.btns {
+    display: flex;
+}
+
+
+/* Buttons */
+.btn-edit {
+    background-color: #ff5a65 !important;
+    border: solid rgb(255, 32, 47) 2px !important;
+}
+
+.show-card{
+    padding: 0px !important;
+}
