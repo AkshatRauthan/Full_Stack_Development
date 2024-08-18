@@ -87,3 +87,8 @@ body{
 .card-img-overlay:hover{
     opacity: 0.2 !important;
 }
+
+/* Show Route : show.ejs */
+.show-img{
+    height: 30vh !important;
+}
