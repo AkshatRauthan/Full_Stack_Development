@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini-Whatsapp</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h2>All The Chats Available Are As Follows : </h2><hr>
+    <% for (obj of chats){ %>
+        <div class="chats"><hr>
+            <p> From :<i> <%= obj.From %> </i></p>
+            <div class="message">
+                <% if (!obj.Message) { %>
+                    <p><i> Empty Contents </i></p>
+                <% }
+                else { %>
+                    <p><%= obj.Message %></p>
+                <% } %>
+            </div>
+            <p> Receiver :<i> <%= obj.To %>  </i></p>
+            <p>
+                <%= obj.CreatedAt.toString().split(" ")[4] %>
+                <%= obj.CreatedAt.toString().split(" ").slice(1, 4).join(" ") %>
+            </p><hr>
+
+            <div class="buttons">
+                <form action="/chats/<%=obj._id%>" method="get">
+                    <button>Show Chat</button>
+                </form>
+                
+                <form action="/chats/<%=obj._id%>/edit" method="get">
+                    <button>Update Chat</button>
+                </form>
+
+                <form action="/chats/<%=obj._id%>?_method=DELETE" method="post">
+                    <button>Delete Chat</button>    
+                </form>
+            </div>
+            
+        </div>
+        <br><br>
+    <% } %>
+
+    <br><br>
+    <label> Click Here To Add New Chat : </label>
+    <a href="/chats/new"><button> Click Me </button></a>
+    <br><br>
+
+</body>
+</html> 

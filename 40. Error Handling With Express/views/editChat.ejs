@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Requested Chat</title>
+    <style>
+        *{
+            text-align: center;
+        }
+        input{
+            width:18vw;
+        }
+        .message{
+            display: flex;
+            margin: 0px auto;
+            align-items: center;
+            justify-content: center;
+        }
+    </style>
+</head>
+
+<body>
+    <h2>Edit The Selected Chat Below</h2>
+    <form action="/chats/<%=result._id%>?_method=PUT" method="POST">
+
+        <label for="From"> From : </label>
+        <input type="text" placeholder="Enter The Sender's Name" name="From"
+        value="<%=result.From%>"><br><br>
+
+        <div class="message">
+            <label for="Message"> Message :&nbsp;&nbsp;&nbsp; </label><br>
+            <textarea name="Message" rows="4" cols="30"><%=result.Message%></textarea>
+        </div><br>
+
+        <label for="To"> For : </label>
+        <input type="text" placeholder="Enter The Receiver's Name" name="To"
+        value="<%=result.To%>"><br><br>
+
+        <button type="submit">Submit</button>
+        <button type="reset"> Reset</button>
+
+    </form>
+</body>
+</html>
