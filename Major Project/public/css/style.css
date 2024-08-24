@@ -107,3 +107,9 @@ body{
 .show-card{
     padding: 0px !important;
 }
+
+/* New Route : newListing.ejs */
+.input-feedback{
+    display: flex !important;
+    align-items: center !important;
+}

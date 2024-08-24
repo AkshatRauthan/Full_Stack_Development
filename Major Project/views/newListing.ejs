@@ -1,41 +1,72 @@
 <% layout('/layouts/boilerplate') %>
 
 <body><br>
-    <h2>Create A New Listing</h2><br>
+    <h2 class="offset-2">Create A New Listing</h2><br>
     
     <div class="col-8 offset-2">
 
-        <form action="/listings" method="post">
+        <form action="/listings" method="post" novalidate class="needs-validation">
             <div class="mb-4">
-                <label class="form-label" for="listing[title]">Title : </label>&nbsp;
-                <input class="form-control" type="text" name="listing[title]" placeholder="Enter The Title Of The Listing">
+                <label for="listing[title]" class="form-label" >Title : </label>&nbsp;
+                <input name="listing[title]" class="form-control" type="text"  
+                placeholder="Enter  The  Title  Of  The  Listing" required>
+                <div class="valid-feedback"> Looks Good! </div>
+                <div class="invalid-feedback">
+                    <div class="input-feedback"><i class="material-symbols-outlined">error</i>
+                        &nbsp; Please Enter A Valid Title</div>
+                </div>
             </div>
 
             <div class="mb-4">
-                <label class="form-label" for="listing[description]">Description : </label>&nbsp;&nbsp;
-                <textarea class="form-control" name="listing[description]" rows="4" cols="27" placeholder="Enter The Description"></textarea>
+                <label for="listing[description]" class="form-label" >Description : </label>&nbsp;&nbsp;
+                <textarea name="listing[description]" class="form-control" rows="4" cols="27" 
+                placeholder="Enter  The  Description  Of  Your  Listing" required></textarea>
+                <div class="valid-feedback"> Looks Good! </div>
+                <div class="invalid-feedback">
+                    <div class="input-feedback"><i class="material-symbols-outlined">error</i>
+                        &nbsp; Please Enter A Valid Description</div>
+                </div>
             </div>
 
             <div class="mb-4">
-                <label class="form-label" for="listing[image]">Image : </label>&nbsp;
-                <input class="form-control" type="text" name="listing[image]" placeholder="Enter The URL Of The Display Image">
+                <label for="listing[image]" class="form-label" >Image : </label>&nbsp;
+                <input name="listing[image]" class="form-control" type="text" 
+                placeholder="Enter  The  URL  Of  The  Image">
             </div>
 
             <div class="row">
-                <div class="mb-4 col-md-4">
-                    <label class="form-label" for="listing[price]">Price : </label>&nbsp;
-                    <input class="form-control" type="number" name="listing[price]" placeholder="The Price Per Night">
+                <div class="mb-4 col-md-5">
+                    <label for="listing[price]" class="form-label" >Price : </label>&nbsp;
+                    <input name="listing[price]" class="form-control" type="number" 
+                    placeholder="Enter  The  Price  Per  Night" required>
+                    <div class="valid-feedback"> Looks Good! </div>
+                    <div class="invalid-feedback">
+                        <div class="input-feedback"><i class="material-symbols-outlined">error</i>
+                            &nbsp; Please Enter A Valid Price</div>
+                    </div>
                 </div>
     
-                <div class="mb-4 col-md-8">
-                    <label class="form-label" for="listing[location]">Location : </label>&nbsp;
-                    <input class="form-control" type="text" name="listing[location]" placeholder="Enter The Location Of The Listing">
+                <div class="mb-4 col-md-7">
+                    <label for="listing[location]" class="form-label" >Location : </label>&nbsp;
+                    <input name="listing[location]"  class="form-control" type="text"
+                    placeholder="Enter  The  Location  Of  The  Listing" required>
+                    <div class="valid-feedback"> Looks Good! </div>
+                    <div class="invalid-feedback">
+                        <div class="input-feedback"><i class="material-symbols-outlined">error</i>
+                            &nbsp; Please Enter A Valid Location</div>
+                    </div>
                 </div>
             </div>
 
             <div class="mb-4">
                 <label class="form-label" for="listing[country]">Country : </label>&nbsp;
-                <input class="form-control" type="text" name="listing[country]" placeholder="Enter The Country of the Location">
+                <input class="form-control" type="text" name="listing[country]" 
+                placeholder="Enter  The  Country  Of  The  Location" required>
+                <div class="valid-feedback"> Looks Good! </div>
+                <div class="invalid-feedback">
+                    <div class="input-feedback"><i class="material-symbols-outlined">error</i>
+                        &nbsp; Please Enter A Valid Country</div>
+                </div>
             </div>  
 
             <button class="btn btn-dark" type="submit">Add</button>&nbsp;&nbsp;

@@ -16,6 +16,7 @@
     "express": "^4.19.2",
     "fs": "^0.0.1-security",
     "i": "^0.3.7",
+    "joi": "^17.13.3",
     "method-overload": "^0.1.1",
     "method-override": "^3.0.0",
     "mongoose": "^8.5.2",
