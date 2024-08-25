@@ -1,8 +1,5 @@
 const mongoose = require(`mongoose`);
-const path = require(`path`);
-const chat = require(`./models/chat.js`);
 const Chat = require("./models/chat.js");
-const { LoremModule } = require("@faker-js/faker");
 
 main().then(() => console.log(`\nConnection Successfull\n`))
 .catch((error) => console.log(error));
