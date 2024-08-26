@@ -9,6 +9,7 @@ body{
     flex: 1;
 }
 
+
 /* Navbar */
 .navbar{
     height: 5rem;
@@ -56,8 +57,19 @@ body{
 }
 
 
+/* Buttons */
+.btn-edit {
+    background-color: #ff5a65 !important;
+    border: solid rgb(255, 32, 47) 2px !important;
+}
+
+.show-card{
+    padding: 0px !important;
+}
+
+
 /* Index Route : index.ejs */
-.card{
+.listing-card{
     border: none !important;    
     width: 20rem !important;
     padding: 1rem !important;
@@ -88,6 +100,7 @@ body{
     opacity: 0.2 !important;
 }
 
+
 /* Show Route : show.ejs */
 .show-img{
     height: 30vh !important;
@@ -97,16 +110,6 @@ body{
     display: flex;
 }
 
-
-/* Buttons */
-.btn-edit {
-    background-color: #ff5a65 !important;
-    border: solid rgb(255, 32, 47) 2px !important;
-}
-
-.show-card{
-    padding: 0px !important;
-}
 
 /* New Route : newListing.ejs */
 .input-feedback{

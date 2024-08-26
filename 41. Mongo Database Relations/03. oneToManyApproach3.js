@@ -42,12 +42,12 @@ const Post = mongoose.model("Post", postSchema);
 // Adding A New User And Post
 const addData = async() => {
     const user1 = new User({
-        username : "Akshat",
-        email : "a1@gmail.com"
+        username : "krit",
+        email : "imkvm6@gmail.com"
     });
     const post1 = new Post({
-        content : "This Is My First Post!",
-        likes : 1.25e3
+        content : "You know who I'm",
+        likes : 120
     });
     post1.user = user1;
 

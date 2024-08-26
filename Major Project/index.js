@@ -5,10 +5,11 @@ const mongoose = require(`mongoose`);
 const path = require(`path`);
 const methodOverride = require("method-override");
 const Listing = require(`./models/listing.js`);
+const Review  =  require(`./models/review.js`);
 const ExpressError = require(`./utils/expressError.js`);
 const wrapAsync = require(`./utils/wrapAsync.js`);
 const joi = require(`joi`);
-const { listingSchema } = require(`./schema.js`);
+const { listingSchema, reviewSchema } = require(`./schema.js`);
 
 app.set("views", path.join(__dirname,"views"));
 app.set("view engine", "ejs");
@@ -37,7 +38,16 @@ const validateListings = (req, res, next) => {
     if (error){
         let errMsg = error.details.map((el) => el.message).join(", ");
         throw new ExpressError(400, errMsg);
-        }
+    }
+    else next();
+};
+
+const validateRatings = (req, res, next) => {
+    let { error } = reviewSchema.validate(req.body);
+    if (error){
+        let errMsg = error.details.map((el) => el.message).join(", ");
+        throw new ExpressError(400, errMsg);
+    }
     else next();
 };
 
@@ -62,7 +72,7 @@ app.post(`/listings`, validateListings, wrapAsync(async (req, res, next) => {
 // 03. Show Route : Getting All The Details Of The Selected Listing
 app.get('/listings/:id', wrapAsync(async (req, res, next) => {
     const {id} = req.params;
-    let data = await Listing.findById(id)
+    let data = await Listing.findById(id).populate("reviews");
     res.render(`show.ejs`, {listing : data});
 }));
 
@@ -80,12 +90,32 @@ app.put(`/listings/:id`, validateListings, wrapAsync(async (req, res, next) => {
 }));
 
 
-// 05. Delete Route : Deleting An Already Existing Listing
-app.delete('/listings/:id', async (req, res, next) => {
+// 05. Delete Route : Deleting An Already Existing Listing Along With Its All Related Reviews
+app.delete('/listings/:id', wrapAsync(async (req, res, next) => {
     const {id} = req.params;
     await Listing.findByIdAndDelete(id)
     res.redirect(`/listings`);
-});
+}));
+
+
+// 06. Review Route : Adding A New Review For An Already Existing Listing
+app.post(`/listings/:id/reviews`, validateRatings, wrapAsync(async (req, res, next) => {
+    let listing = await Listing.findById(req.params.id);
+    let review = new Review(req.body.review);
+    listing.reviews.push(review);
+    await review.save();
+    await listing.save();
+    res.redirect(`/listings/${req.params.id}`); 
+}));
+
+
+// 07. Review Delete Route : For Deleting The Requested Review And Removing It From The Parent Listing.
+app.delete(`/listings/:id/reviews/:reviewId`, wrapAsync(async (req, res, next) => {
+    let {id, reviewId} = req.params;
+    let review = await Review.findByIdAndDelete(reviewId);
+    Listing.findByIdAndUpdate(id, {$pull :{reviews : reviewId}});
+    res.redirect(`/listings/${req.params.id}`); 
+}));
 
 // Handling Errors
 app.all("*", (req, res, next) => {
