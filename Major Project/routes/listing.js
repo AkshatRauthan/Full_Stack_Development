@@ -29,28 +29,38 @@ router.get(`/new`, (req, res) => {
 router.post(``, validateListings, wrapAsync(async (req, res, next) => {
     const newListing  = new Listing(req.body.listing);
     await newListing.save();
-    res.redirect(``);
+    req.flash("Success", "New Listing Created!");
+    res.redirect(`/listings`);
 }));
 
 
 // 03. Show Route : Getting All The Details Of The Selected Listing
 router.get('/:id', wrapAsync(async (req, res, next) => {
     const {id} = req.params;
-    let data = await Listing.findById(id).populate("reviews");
-    res.render(`show.ejs`, {listing : data});
+    let listing = await Listing.findById(id).populate("reviews");
+    if (!listing){
+        req.flash(`Error`, `The Requested Listing Doesn't Exists!`);
+        res.redirect(`/listings`);
+    }
+    res.render(`show.ejs`, {listing});
 }));
 
 
 // 04. Edit And Update Route : Changing The Values Of The Existing Listings
 router.get(`/:id/edit`, wrapAsync(async (req, res, next) => {
     const {id} = req.params;
-    let result = await Listing.findById(id)
-    res.render(`update.ejs`, {result});
+    let listing = await Listing.findById(id)
+    if (!listing){
+        req.flash(`Error`, `The Requested Listing Doesn't Exists!`);
+        res.redirect(`/listings`);
+    }
+    res.render(`update.ejs`, {listing});
 }));
 router.put(`/:id`, validateListings, wrapAsync(async (req, res, next) => {
     const {id} = req.params;
     await Listing.findByIdAndUpdate(id, req.body.listing);
-    res.redirect(`/${id}`);
+    req.flash("Success", "Updated Requested Listing!");
+    res.redirect(`/listings/${id}`);
 }));
 
 
@@ -58,7 +68,8 @@ router.put(`/:id`, validateListings, wrapAsync(async (req, res, next) => {
 router.delete('/:id', wrapAsync(async (req, res, next) => {
     const {id} = req.params;
     await Listing.findByIdAndDelete(id)
-    res.redirect(``);
+    req.flash("Success", "Requested Listing Deleted!");
+    res.redirect(`/listings`);
 }));
 
 module.exports = router;
