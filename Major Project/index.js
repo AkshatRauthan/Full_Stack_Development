@@ -5,10 +5,14 @@ const mongoose = require(`mongoose`);
 const path = require(`path`);
 const methodOverride = require("method-override");
 const ExpressError = require(`./utils/expressError.js`);
-const listings = require(`./routes/listing.js`);
-const reviews = require(`./routes/reviews.js`);
+const listingRouter = require(`./routes/listing.js`);
+const reviewRouter = require(`./routes/reviews.js`);
+const userRouter = require(`./routes/user.js`);
 const session = require(`express-session`);
 const flash = require(`connect-flash`);
+const passport = require(`passport`);
+const LocalStrategy = require('passport-local');
+const User = require('./models/user.js');
 
 const sessionOptions = {
     secret: "mySuperSecretIsWhomITrulyAm",
@@ -30,6 +34,13 @@ app.engine(`ejs`, ejsMate);
 app.use(session(sessionOptions));
 app.use(flash());
 
+// Implementing Local Strategy For Authentication For Indivisual Sessions
+app.use(passport.initialize());
+app.use(passport.session());
+passport.use(new LocalStrategy(User.authenticate()));
+
+passport.serializeUser(User.serializeUser());
+passport.deserializeUser(User.deserializeUser());
 
 async function main(){
     await mongoose.connect(`mongodb://127.0.0.1:27017/wanderlust`);
@@ -46,14 +57,17 @@ app.get('/', (req, res) => {
     res.send('The App Is Working');
 });
 
+// Adding Our Flash Messages In Session Object And Making Them Acessible For All Routes
+// By Storing Them In As Variables In The locals Object Of Request.
 app.use((req, res, next) => {
-    res.locals.success = req.flash("Success");
-    res.locals.error = req.flash("Error");
+    res.locals.success = req.flash("success");
+    res.locals.error = req.flash("error");
     next();
 });
 
-app.use(`/listings/:id/reviews`, reviews);
-app.use(`/listings`, listings);
+app.use(`/listings/:id/reviews`, reviewRouter);
+app.use(`/listings`, listingRouter);
+app.use(`/`, userRouter);
 
 
 // Handling Errors
