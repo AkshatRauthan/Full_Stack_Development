@@ -3,11 +3,11 @@
 <body >
     <h2 class="mt-3 offset-2">Edit Your Listing</h2><br>
 
-    <form method="post" action="/listings/<%= result._id%>?_method=PUT" class="needs-validation offset-2" novalidate>
+    <form method="post" action="/listings/<%= listing._id%>?_method=PUT" class="needs-validation offset-2" novalidate>
 
         <div class="mb-4">
             <label for="listing[title]" class="form-label" >Title : </label>&nbsp;
-            <input name="listing[title]" class="form-control" type="text" value="<%=result.title%>"
+            <input name="listing[title]" class="form-control" type="text" value="<%=listing.title%>"
                 placeholder="Enter The Title Of The Listing" required>
             <div class="valid-feedback"> Looks Good! </div>
             <div class="invalid-feedback">
@@ -19,7 +19,7 @@
         <div class="mb-4">
             <label for="listing[description]" class="form-label" >Description : </label>&nbsp;&nbsp;
             <textarea name="listing[description]" class="form-control" rows="2" cols="27" 
-            placeholder="Enter The Description" required><%=result.description %></textarea>
+            placeholder="Enter The Description" required><%=listing.description %></textarea>
             <div class="valid-feedback"> Looks Good! </div>
             <div class="invalid-feedback">
                 <div class="input-feedback"><i class="material-symbols-outlined">error</i>
@@ -29,7 +29,7 @@
 
         <div class="mb-4">
             <label for="listing[image]" class="form-label" >Image : </label>&nbsp;
-            <input name="listing[image]" class="form-control" type="text" value="<%=result.image%>"
+            <input name="listing[image]" class="form-control" type="text" value="<%=listing.image%>"
                 placeholder="Enter The URL Of The Display Image" required>
             <div class="invalid-feedback">
                 <div class="input-feedback"><i class="material-symbols-outlined">error</i>
@@ -40,7 +40,7 @@
         <div class="row">
             <div class="mb-4 col-md-5">
                 <label for="listing[price]" class="form-label" >Price : </label>&nbsp;
-                <input name="listing[price]" class="form-control" type="number" value="<%=result.price%>"
+                <input name="listing[price]" class="form-control" type="number" value="<%=listing.price%>"
                 placeholder="Enter The Price Per Night" required>
                 <div class="valid-feedback"> Looks Good! </div>
                 <div class="invalid-feedback">
@@ -51,7 +51,7 @@
 
             <div class="mb-4 col-md-7">
                 <label for="listing[location]" class="form-label" >Location : </label>&nbsp;
-                <input name="listing[location]"  class="form-control" type="text" value="<%=result.location%>"
+                <input name="listing[location]"  class="form-control" type="text" value="<%=listing.location%>"
                 placeholder="Enter The Location Of The Listing" required>
                 <div class="valid-feedback"> Looks Good! </div>
                 <div class="invalid-feedback">
@@ -63,7 +63,7 @@
 
         <div class="mb-4">
             <label class="form-label" for="listing[country]">Country : </label>&nbsp;
-            <input class="form-control" type="text" name="listing[country]" value="<%=result.country%>"
+            <input class="form-control" type="text" name="listing[country]" value="<%=listing.country%>"
             placeholder="Enter The Country of the Location" required>
             <div class="valid-feedback"> Looks Good! </div>
             <div class="invalid-feedback">
