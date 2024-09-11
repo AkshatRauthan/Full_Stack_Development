@@ -1,23 +1,13 @@
 const express = require(`express`);
 const router = express.Router({mergeParams : true});
 const Listing = require(`../models/listing.js`);
-const ExpressError = require(`../utils/expressError.js`);
 const wrapAsync = require(`../utils/wrapAsync.js`);
 const Review = require(`../models/review.js`);
-const { reviewSchema } = require(`../schema.js`);
-
-const validateRatings = (req, res, next) => {
-    let { error } = reviewSchema.validate(req.body);
-    if (error){
-        let errMsg = error.details.map((el) => el.message).join(", ");
-        throw new ExpressError(400, errMsg);
-    }
-    else next();
-};
+const {isLoggedIn, isOwner, isAuthor, validateRatings} = require(`../middlewares.js`);
 
 
 // 01. Review Delete Route : For Deleting The Requested Review And Removing It From The Parent Listing.
-router.delete(`/:reviewId`, wrapAsync(async (req, res, next) => {
+router.delete(`/:reviewId`, isLoggedIn, isAuthor, wrapAsync(async (req, res, next) => {
     let {id, reviewId} = req.params;
     let review = await Review.findByIdAndDelete(reviewId);
     Listing.findByIdAndUpdate(id, {$pull :{reviews : reviewId}});
@@ -26,10 +16,13 @@ router.delete(`/:reviewId`, wrapAsync(async (req, res, next) => {
 }));
 
 // 02. Review Route : Adding A New Review For An Already Existing Listing
-router.post(`/`, validateRatings, wrapAsync(async (req, res, next) => {
+router.post(``, validateRatings, isLoggedIn, wrapAsync(async (req, res, next) => {
     let listing = await Listing.findById(req.params.id);
     let review = new Review(req.body.review);
+    review.authorName = req.user.username;
+    review.author = req.user._id;
     listing.reviews.push(review);
+    console.log(review);
     await review.save();
     await listing.save();
     req.flash("success", "Added New Review!");

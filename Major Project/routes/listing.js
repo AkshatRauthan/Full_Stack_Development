@@ -1,19 +1,12 @@
 const express = require(`express`);
 const router = express.Router();
 const Listing = require(`../models/listing.js`);
-const ExpressError = require(`../utils/expressError.js`);
 const wrapAsync = require(`../utils/wrapAsync.js`);
-const { listingSchema } = require(`../schema.js`);
-const {isLoggedIn} = require(`../middlewares.js`);
+const {isLoggedIn, isOwner, validateListings} = require(`../middlewares.js`);
+const methodOverride = require("method-override"); 
 
-const validateListings = (req, res, next) => {
-    let { error } = listingSchema.validate(req.body);
-    if (error){
-        let errMsg = error.details.map((el) => el.message).join(", ");
-        throw new ExpressError(400, errMsg);
-    }
-    else next();
-};
+const app = express();
+app.use(methodOverride("_method"));
 
 
 // 01. Index Route : Getting Titles Of All The Available Listings  
@@ -29,6 +22,7 @@ router.get(`/new`, isLoggedIn, (req, res) => {
 });
 router.post(``, isLoggedIn, validateListings, wrapAsync(async (req, res, next) => {
     const newListing  = new Listing(req.body.listing);
+    newListing.owner = req.User._id;
     await newListing.save();
     req.flash("success", "New Listing Created!");
     res.redirect(`/listings`);
@@ -38,7 +32,7 @@ router.post(``, isLoggedIn, validateListings, wrapAsync(async (req, res, next) =
 // 03. Show Route : Getting All The Details Of The Selected Listing
 router.get('/:id', wrapAsync(async (req, res, next) => {
     const {id} = req.params;
-    let listing = await Listing.findById(id).populate("reviews");
+    let listing = await Listing.findById(id).populate("reviews").populate("owner");
     if (!listing){
         req.flash(`error`, `The Requested Listing Doesn't Exists!`);
         res.redirect(`/listings`);
@@ -48,16 +42,16 @@ router.get('/:id', wrapAsync(async (req, res, next) => {
 
 
 // 04. Edit And Update Route : Changing The Values Of The Existing Listings
-router.get(`/:id/edit`, isLoggedIn, wrapAsync(async (req, res, next) => {
+router.get(`/:id/edit`, isLoggedIn, isOwner, wrapAsync(async (req, res, next) => {
     const {id} = req.params;
     let listing = await Listing.findById(id);
     if (!listing){
         req.flash(`error`, `The Requested Listing Doesn't Exists!`);
-        res.redirect(`/listings`);
+        return res.redirect(`/listings`);
     }
     res.render(`listings/update.ejs`, {listing});
 }));
-router.put(`/:id`, validateListings, isLoggedIn, wrapAsync(async (req, res, next) => {
+router.put(`/:id`, validateListings, isLoggedIn, isOwner, wrapAsync(async (req, res, next) => {
     const {id} = req.params;
     await Listing.findByIdAndUpdate(id, req.body.listing);
     req.flash("success", "Updated Requested Listing!");
@@ -66,7 +60,7 @@ router.put(`/:id`, validateListings, isLoggedIn, wrapAsync(async (req, res, next
 
 
 // 05. Delete Route : Deleting An Already Existing Listing Along With Its All Related Reviews
-router.delete('/:id', isLoggedIn, wrapAsync(async (req, res, next) => {
+router.delete('/:id', isLoggedIn, isOwner, wrapAsync(async (req, res, next) => {
     const {id} = req.params;
     await Listing.findByIdAndDelete(id)
     req.flash("success", "Requested Listing Deleted!");

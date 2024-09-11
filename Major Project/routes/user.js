@@ -31,12 +31,13 @@ router.post("/signup", wrapAsync(async (req, res, next) => {
 
 
 // 02. Login Route : Login Existing User
-router.get("/login", (req, res) => {
+router.get("/login",saveRedirectUrl, (req, res) => {
     res.render("users/login.ejs");
 });
 router.post("/login",saveRedirectUrl,passport.authenticate("local", { failureRedirect : "/login", failureFlash : true}), async (req, res) => {
     req.flash("success", "Welcome Back To Wanderlust!");
-    res.redirect(res.locals.redirectUrl);
+    if (res.locals.redirectUrl) return res.redirect(res.locals.redirectUrl);
+    else res.redirect(`/listings`);
 });
 
 

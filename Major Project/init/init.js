@@ -11,6 +11,7 @@ main().then(() => console.log(`Connection Successfull`))
 
 async function initializeDB(){
     await Listing.deleteMany({});
+    testData.data = testData.data.map((obj) => ({...obj, owner:'66e1361428fe43fd1034dec1'}));
     await Listing.insertMany(testData.data);
     console.log(`The Database Is Initialized With The Test Data`);
 }
