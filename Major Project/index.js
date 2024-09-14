@@ -1,3 +1,7 @@
+if (process.env.Node_ENV != "production"){
+    require('dotenv').config();
+}
+  
 const express =  require(`express`);
 const app = express();
 const ejsMate = require('ejs-mate');
@@ -13,6 +17,8 @@ const flash = require(`connect-flash`);
 const passport = require(`passport`);
 const LocalStrategy = require('passport-local');
 const User = require('./models/user.js');
+const multer = require(`multer`);
+const upload = multer({dest : `./uploads/`});
 
 const sessionOptions = {
     secret: "mySuperSecretIsWhomITrulyAm",
@@ -63,6 +69,7 @@ app.use((req, res, next) => {
     res.locals.success = req.flash("success");
     res.locals.error = req.flash("error");
     res.locals.currUser = req.user;
+    console.log('\nThe URL Requested Is : ',req.url);
     next();
 });
 
@@ -72,11 +79,12 @@ app.use(`/`, userRouter);
 
 
 // Handling Errors
-app.all("*", (req, res, next) => {
+app.use((req, res, next) => {
     next(new ExpressError(404,"Requested Page Is Not Found!!"));
 });
 
 app.use((err, req, res, next) => { 
+    console.log(err);
     let {statusCode = 500, message = "Encountered Some Error!"} = err;
     console.log(`\nError Encounered!!! \n${message}!!!`);
     res.status(statusCode).render("error.ejs", {err});

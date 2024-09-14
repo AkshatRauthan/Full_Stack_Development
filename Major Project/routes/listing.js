@@ -1,70 +1,44 @@
 const express = require(`express`);
 const router = express.Router();
-const Listing = require(`../models/listing.js`);
 const wrapAsync = require(`../utils/wrapAsync.js`);
 const {isLoggedIn, isOwner, validateListings} = require(`../middlewares.js`);
 const methodOverride = require("method-override"); 
-
+const listingController = require(`../controllers/listings.js`);
 const app = express();
 app.use(methodOverride("_method"));
+const multer = require(`multer`);
+const {storage} = require('../cloudConfig.js');
+const upload = multer({ storage });
 
 
-// 01. Index Route : Getting Titles Of All The Available Listings  
-router.get(`/`, wrapAsync(async (req, res, next) => {
-    let result = await Listing.find({});
-    res.render(`listings/index.ejs`, {result});
-}));
+router.route(`/`)
+// 01. Index Route : Displaying All The Available Listings  
+.get(wrapAsync(listingController.index))
+
+// 02. Create Route : Creating A New Listing
+.post( isLoggedIn, upload.single(`listing[image]`), validateListings,wrapAsync(listingController.createListing));
 
 
-// 02. New And Create Route : Adding A New Listing To Our Data
-router.get(`/new`, isLoggedIn, (req, res) => {
-    res.render('listings/newListing.ejs');
-});
-router.post(``, isLoggedIn, validateListings, wrapAsync(async (req, res, next) => {
-    const newListing  = new Listing(req.body.listing);
-    newListing.owner = req.User._id;
-    await newListing.save();
-    req.flash("success", "New Listing Created!");
-    res.redirect(`/listings`);
-}));
+
+// 03. New Route : Opening Form To Create A New Listing
+router.get(`/new`, isLoggedIn, listingController.renderNewForm);
 
 
-// 03. Show Route : Getting All The Details Of The Selected Listing
-router.get('/:id', wrapAsync(async (req, res, next) => {
-    const {id} = req.params;
-    let listing = await Listing.findById(id).populate("reviews").populate("owner");
-    if (!listing){
-        req.flash(`error`, `The Requested Listing Doesn't Exists!`);
-        res.redirect(`/listings`);
-    }
-    res.render(`listings/show.ejs`, {listing});
-}));
+
+router.route(`/:id`)
+// 04. Show Route : Getting All The Details Of The Selected Listing
+.get(wrapAsync(listingController.showListing))
+
+// 05. Update Route : Updating An Existing Listing
+.put(validateListings, isLoggedIn, isOwner, wrapAsync(listingController.updateListing))
+
+// 06. Delete Route : Deleting An Already Existing Listing Along With Its All Related Reviews
+.delete(isLoggedIn, isOwner, wrapAsync(listingController.deleteListing));
 
 
-// 04. Edit And Update Route : Changing The Values Of The Existing Listings
-router.get(`/:id/edit`, isLoggedIn, isOwner, wrapAsync(async (req, res, next) => {
-    const {id} = req.params;
-    let listing = await Listing.findById(id);
-    if (!listing){
-        req.flash(`error`, `The Requested Listing Doesn't Exists!`);
-        return res.redirect(`/listings`);
-    }
-    res.render(`listings/update.ejs`, {listing});
-}));
-router.put(`/:id`, validateListings, isLoggedIn, isOwner, wrapAsync(async (req, res, next) => {
-    const {id} = req.params;
-    await Listing.findByIdAndUpdate(id, req.body.listing);
-    req.flash("success", "Updated Requested Listing!");
-    res.redirect(`/listings/${id}`);
-}));
 
+// 07. Edit Route : Opening Form To Update Existing Listing
+router.get(`/:id/edit`, isLoggedIn, isOwner, wrapAsync(listingController.renderEditForm));
 
-// 05. Delete Route : Deleting An Already Existing Listing Along With Its All Related Reviews
-router.delete('/:id', isLoggedIn, isOwner, wrapAsync(async (req, res, next) => {
-    const {id} = req.params;
-    await Listing.findByIdAndDelete(id)
-    req.flash("success", "Requested Listing Deleted!");
-    res.redirect(`/listings`);
-}));
 
 module.exports = router;
