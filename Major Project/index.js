@@ -1,7 +1,7 @@
 if (process.env.Node_ENV != "production"){
     require('dotenv').config();
 }
-  
+
 const express =  require(`express`);
 const app = express();
 const ejsMate = require('ejs-mate');
@@ -69,7 +69,7 @@ app.use((req, res, next) => {
     res.locals.success = req.flash("success");
     res.locals.error = req.flash("error");
     res.locals.currUser = req.user;
-    console.log('\nThe URL Requested Is : ',req.url);
+    // console.log('\nThe URL Requested Is : ',req.url);
     next();
 });
 
@@ -80,7 +80,8 @@ app.use(`/`, userRouter);
 
 // Handling Errors
 app.use((req, res, next) => {
-    next(new ExpressError(404,"Requested Page Is Not Found!!"));
+    if (req.url == "/favicon.ico") next();
+    else next(new ExpressError(404,"Requested Page Is Not Found!!"));
 });
 
 app.use((err, req, res, next) => { 

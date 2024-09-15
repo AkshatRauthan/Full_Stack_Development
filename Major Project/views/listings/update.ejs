@@ -3,7 +3,8 @@
 <body >
     <h2 class="mt-3 offset-2">Edit Your Listing</h2><br>
 
-    <form method="post" action="/listings/<%= listing._id%>?_method=PUT" class="needs-validation offset-2" novalidate>
+    <form method="post" action="/listings/<%= listing._id%>?_method=PUT" class="needs-validation offset-2" novalidate
+        enctype="multipart/form-data">
 
         <div class="mb-4">
             <label for="listing[title]" class="form-label" >Title : </label>&nbsp;
@@ -27,14 +28,15 @@
             </div>
         </div>
 
+        <div class="mb-3">
+            Original Listing Image : <br>
+            <img src="<%= url %>" class="mt-2 mb-4 preview-image">
+        </div>
+
         <div class="mb-4">
-            <label for="listing[image]" class="form-label" >Image : </label>&nbsp;
-            <input name="listing[image]" class="form-control" type="text" value="<%=listing.image%>"
-                placeholder="Enter The URL Of The Display Image" required>
-            <div class="invalid-feedback">
-                <div class="input-feedback"><i class="material-symbols-outlined">error</i>
-                    &nbsp; Please Enter A Valid Image Link</div>
-            </div>
+            <label for="listing[image]" class="form-label" > Upload Image If You Want To Change It : </label>&nbsp;
+            <input name="listing[image]" class="form-control" type="file">
+            <div class="valid-feedback"> Looks Good! </div>
         </div>
 
         <div class="row">

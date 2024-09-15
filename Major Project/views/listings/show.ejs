@@ -16,7 +16,7 @@
         <div class="card-body">
             <div class="card-text mt-1"> <i> Owner : <%= listing.owner.username %></i> <br></div><br>
             <div class="card-text mt-2"><%= listing.description %></div>
-            <div class="card-text mt-2">Price &nbsp;:&nbsp; ₹<%= listing.price.toLocaleString("en-IN") %> / Night</div>
+            <div class="card-text mt-2">Price &nbsp;:&nbsp; ₹<%= listing.price.toLocaleString("en-IN") %> / Day</div>
             <div class="card-text mt-2">Location &nbsp;:&nbsp; <%= listing.location %></div>
             <div class="card-text mt-2">Country &nbsp;:&nbsp; <%= listing.country %></div>
         </div>
@@ -64,10 +64,10 @@
             <label for="first-rate5" title="Amazing">5 stars</label>
           </fieldset>
         <button type="submit" class="btn btn-outline-dark">Submit</button>
-    </form><br>
+    </form><hr>
 
     <% if (listing.reviews.length) { %>
-        <hr><br><h4> &nbsp; All Reviews</h4>
+        <br><h4> &nbsp; All Reviews</h4>
         <div class="mt-4 row">
             <% for (review of listing.reviews){ %>
             <div class="card col-5 ms-3 mb-3">
@@ -83,6 +83,18 @@
             </div>
             <% } %>
         </div>
+        <hr>
     <% } %>
+</div>
 
+<script>
+    const mapToken = "<%= process.env.MAP_TOKEN %>";
+    const listing = <%- JSON.stringify(listing) %>;
+</script>
+
+<div class="col-8 offset-3 mt-5 mb-3">
+    <h4>Where you'll be</h4><br>
+    <div id="map">
+        <script src="/js/map.js"></script>
+    </div>
 </div>

@@ -36,6 +36,7 @@ body{
     justify-content: center;
     align-content: space-evenly;
     text-align: center;
+    
 }
 
 .f-info-links, .f-info-socials{
@@ -110,9 +111,22 @@ body{
     display: flex;
 }
 
+#map { 
+    height: 50vh;
+}
+
 
 /* New Route : newListing.ejs */
 .input-feedback{
     display: flex !important;
     align-items: center !important;
+}
+
+
+/* Edit Route : editListing.ejs */
+.preview-image{
+    border-radius: 2rem;
+    object-fit: cover;
+    width: 450px;
+    max-height: 300px;
 }
