@@ -18,7 +18,7 @@ const passport = require(`passport`);
 const LocalStrategy = require('passport-local');
 const User = require('./models/user.js');
 const multer = require(`multer`);
-const upload = multer({dest : `./uploads/`});
+
 
 const sessionOptions = {
     secret: "mySuperSecretIsWhomITrulyAm",
@@ -59,9 +59,9 @@ app.listen(8080, () => {
     console.log(`\nThe App Is Listenig On Port 8080`);
 });
 
-app.get('/', (req, res) => {
-    res.send('The App Is Working');
-});
+// app.get('/', (req, res) => {
+//     res.send('The App Is Working');
+// });
 
 // Adding Our Flash Messages In Session Object And Making Them Acessible For All Routes
 // By Storing Them In As Variables In The locals Object Of Request.

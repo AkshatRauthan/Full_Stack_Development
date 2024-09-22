@@ -1,25 +1,81 @@
 <% layout('/layouts/boilerplate') %>
 
-<body>
-    <h2>All Listings</h2>
-        
-    <div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
-        <% for(listing of result){  %>
+<style>
+    
+</style>
 
-            <a href="/listings/<%= listing._id %>" class="listing-links">
-                <div class="card col listing-card">
-                    <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image">
-                        <div class="card-img-overlay">
-                        </div>
-                    <div class="card-body">
-                        <p>
-                            <b><%= listing.title %></b> <br>
-                            &#8377; <%= listing.price.toLocaleString("en-In") %>/Day
-                        </p>
-                    </div>
-                </div>
-            </a>
-        <% } %>
+<div id="filters">
+
+    <div class="options">
+        <div class="filter">
+            <i class="fa-solid fa-fire"></i>
+            <p>Trending</p> 
+        </div>
+
+        <div class="filter">
+            <i class="fa-solid fa-mountain-city"></i>
+            <p>Iconic Cities</p>
+        </div>
+    
+        <div class="filter">
+            <i class="fa-solid fa-mountain"></i>
+            <p>Mountains</p>
+        </div>
+    
+        <div class="filter">
+            <i class="fa-brands fa-fort-awesome"></i>
+            <p>Castles</p>
+        </div>
+    
+        <div class="filter">
+            <i class="fa-solid fa-person-swimming"></i>
+            <p>Amazing Pools</p>
+        </div>
+    
+        <div class="filter">
+            <i class="fa-solid fa-campground"></i>
+            <p>Camping</p>
+        </div>
+    
+        <div class="filter">
+            <i class="fa-solid fa-cow"></i>
+            <p>Farms</p>
+        </div>
+    
+        <div class="filter">
+            <i class="fa-solid fa-snowflake"></i>
+            <p>Arctic</p>
+        </div>
     </div>
 
-</body>
+    <div class="tax-toggler">
+        <div class="form-check form-switch form-check-reverse">
+            <input class="form-check-input" type="checkbox" id="flexSwitchCheckReverse">
+            <label class="form-check-label" for="flexSwitchCheckReverse">Display Total After Taxes</label>
+        </div>
+    </div>
+
+</div>
+
+<div class="row row-cols-lg-3 row-cols-md-2 row-cols-sm-1">
+    <% for(listing of result){  %>
+
+        <a href="/listings/<%= listing._id %>" class="listing-links">
+            <div class="card col listing-card">
+                <img src="<%= listing.image.url %>" class="card-img-top" alt="listing_image">
+                    <div class="card-img-overlay">
+                    </div>
+                <div class="card-body">
+                    <p>
+                        <b><%= listing.title %></b> <br>
+                        &#8377; <%= listing.price.toLocaleString("en-In") %>/Day
+                        <i class="tax-info"> + 18% GST</i>
+                    </p>
+                </div>
+            </div>
+        </a>
+    <% } %>
+</div>
+
+<script src="/js/showTaxes.js"></script>
+<script src="/js/filters.js"></script>

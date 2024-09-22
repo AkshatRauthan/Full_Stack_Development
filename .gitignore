@@ -1,3 +1,4 @@
 /node_modules
 /Major Project/.env
 /.vscode
+/Major Project/init/.env

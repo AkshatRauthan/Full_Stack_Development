@@ -70,6 +70,47 @@ body{
 
 
 /* Index Route : index.ejs */
+#filters{
+    display: flex;
+    justify-content: space-between;
+}
+
+.options{
+    display: flex;
+}
+
+.filter{
+    text-align: center;
+    margin-right: 1.8rem;
+    margin-top: 1.4rem;
+    opacity: 0.8;
+}
+
+.filter>p{
+    font-size: 0.8rem;
+}
+
+.filter:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.form-check-label{
+    font-size: 0.85rem !important;
+}
+
+.tax-info{
+    display: none;
+}
+
+.tax-toggler{
+    border:1px solid black;
+    border-radius: 1rem;
+    padding: 0.8rem 1.2rem;
+    align-self: center;
+    justify-self:right;
+}
+
 .listing-card{
     border: none !important;    
     width: 20rem !important;
