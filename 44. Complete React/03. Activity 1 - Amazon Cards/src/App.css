@@ -1,0 +1,9 @@
+body>*{
+  text-align: center;
+  margin: 0px auto;
+}
+
+.App{
+  position: relative;
+  top: -16vh;
+}

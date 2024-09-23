@@ -1,0 +1,11 @@
+.Product{
+    border: 0.75px solid #242424;
+    border-radius: 1.25rem;
+    margin: 0px auto;
+    margin-bottom: 1rem;
+    width: fit-content;
+    padding: 0 2rem;
+}
+.Product li{
+    text-align: justify;
+}

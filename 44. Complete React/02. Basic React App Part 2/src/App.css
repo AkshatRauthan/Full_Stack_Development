@@ -1,0 +1,8 @@
+/* In React : Theer Is Diffrent CSS File For All Components */
+
+#root {
+  max-width: 110vw;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}

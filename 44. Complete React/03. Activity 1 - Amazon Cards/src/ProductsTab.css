@@ -1,0 +1,21 @@
+.ProductTab{
+    display: flex;
+    width: 90vw;
+    justify-content: space-evenly;
+}
+
+.Product{
+    border: 1px solid black;
+    border-radius: 1rem;
+    width: 21vw;
+}
+
+.Product>div{
+    margin-top: 1rem;
+}
+
+.ProductPrices{
+    background-color:#e0c367;
+    padding-bottom: 0.75rem;
+    border-radius: 0 0 1rem 1rem;
+}
