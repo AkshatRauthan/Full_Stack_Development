@@ -30,16 +30,16 @@
         </div>
 
         <div class="navnar-nav ms-auto">
-            <form class="d-flex" role="search">
-                <input class="form-control me-2 search-input" type="search" placeholder="Search destinations">
-                <button class="btn search-button" type="submit">
+            <form class="d-flex" role="search" id="search-form" action="/listings/search" method="post">
+                <input class="form-control me-2 search-input" type="search" placeholder="Search destinations" id="search-input" name="location">
+                <button class="btn search-button" type="submit" id="search-button">
                     <i class="fa-solid fa-magnifying-glass"></i>Search
                 </button> 
             </form>
         </div>
 
         <div class="navbar-nav ms-auto">
-            <a class="nav-link" href="/listings/new">Airbnb your home</a>
+            <a class="nav-link" href="/listings/new">List Your Place</a>
             <% if (!currUser) { %>
                 <a class="nav-link" href="/signup"><b>Sign Up</b></a>
                 <a class="nav-link" href="/login"><b>Log In</b></a>

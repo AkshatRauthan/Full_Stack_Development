@@ -73,3 +73,19 @@ module.exports.deleteListing = async (req, res, next) => {
     req.flash("success", "Requested Listing Deleted!");
     res.redirect(`/listings`);
 };
+
+
+module.exports.searchListing = async (req, res, next) => {
+    const {location} = req.body;
+    console.log(location);
+    let result = await Listing.find({$or : [{location : location}, {country : location}]});
+    if (result.length){
+        req.flash(`success`, `All The Listings Available For ${location} Are Below.`);
+        res.locals.success = req.flash("success");
+        res.render(`listings/index.ejs`, {result});
+    }
+    else{
+        req.flash(`error`, `Oops! No Listing Found For ${location}`);
+        res.redirect(`/listings`);
+    }
+};

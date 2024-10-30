@@ -41,4 +41,8 @@ router.route(`/:id`)
 router.get(`/:id/edit`, isLoggedIn, isOwner, wrapAsync(listingController.renderEditForm));
 
 
+
+// 08. Search Route : Searching Listings Based On Cretain Location
+router.post(`/search`, wrapAsync(listingController.searchListing));
+
 module.exports = router;
