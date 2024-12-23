@@ -1,8 +1,8 @@
-module.exports.data = [
+module.exports.testData = [
   {
     title: "Cozy Beachfront Cottage",
     description:
-      "Esc  ape to this charming beachfront cottage for a relaxing getaway. Enjoy stunning ocean views and easy access to the beach.",
+      "Escape to this charming beachfront cottage for a relaxing getaway. Enjoy stunning ocean views and easy access to the beach.",
     image: {
       filename: "listingimage",
       url: "https://images.unsplash.com/photo-1552733407-5d5c46c3bb3b?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTB8fHRyYXZlbHxlbnwwfHwwfHx8MA%3D%3D&auto=format&fit=crop&w=800&q=60",
@@ -10,6 +10,7 @@ module.exports.data = [
     price: 1500,
     location: "Malibu",
     country: "United States",
+    tags : ["Beach"]
   },
   {
     title: "Modern Loft in Downtown",
@@ -22,6 +23,7 @@ module.exports.data = [
     price: 1200,
     location: "New York City",
     country: "United States",
+    tags : ["Top Cities"]
   },
   {
     title: "Mountain Retreat",
@@ -34,6 +36,7 @@ module.exports.data = [
     price: 1000,
     location: "Aspen",
     country: "United States",
+    tags : ["Mountains"]
   },
   {
     title: "Historic Villa in Tuscany",
@@ -46,6 +49,7 @@ module.exports.data = [
     price: 2500,
     location: "Florence",
     country: "Italy",
+    tags : ["Castles"]
   },
   {
     title: "Secluded Treehouse Getaway",
@@ -58,6 +62,7 @@ module.exports.data = [
     price: 800,
     location: "Portland",
     country: "United States",
+    tags : ["Treehouse"]
   },
   {
     title: "Beachfront Paradise",
@@ -70,6 +75,7 @@ module.exports.data = [
     price: 2000,
     location: "Cancun",
     country: "Mexico",
+    tags : ["Beach"]
   },
   {
     title: "Rustic Cabin by the Lake",
@@ -82,6 +88,7 @@ module.exports.data = [
     price: 900,
     location: "Lake Tahoe",
     country: "United States",
+    tags : ["Camping"]
   },
   {
     title: "Luxury Penthouse with City Views",
@@ -94,6 +101,7 @@ module.exports.data = [
     price: 3500,
     location: "Los Angeles",
     country: "United States",
+    tags : ["Beach", "Castles"]
   },
   {
     title: "Ski-In/Ski-Out Chalet",
@@ -106,8 +114,9 @@ module.exports.data = [
     price: 3000,
     location: "Verbier",
     country: "Switzerland",
+    tags : ["Arctic", "Skiing"]
   },
-  {
+  { 
     title: "Safari Lodge in the Serengeti",
     description:
       "Experience the thrill of the wild in a comfortable safari lodge. Witness the Great Migration up close.",
@@ -118,6 +127,7 @@ module.exports.data = [
     price: 4000,
     location: "Serengeti National Park",
     country: "Tanzania",
+    tags : ["Wildlife", "Camping"]
   },
   {
     title: "Historic Canal House",
@@ -130,6 +140,7 @@ module.exports.data = [
     price: 1800,
     location: "Amsterdam",
     country: "Netherlands",
+    tags : ["Top Cities"]
   },
   {
     title: "Private Island Retreat",
@@ -142,6 +153,7 @@ module.exports.data = [
     price: 10000,
     location: "Fiji",
     country: "Fiji",
+    tags : ["Island", "Farms"]
   },
   {
     title: "Charming Cottage in the Cotswolds",
@@ -154,6 +166,7 @@ module.exports.data = [
     price: 1200,
     location: "Cotswolds",
     country: "United Kingdom",
+    tags : ["Farms"]
   },
   {
     title: "Historic Brownstone in Boston",
@@ -166,6 +179,7 @@ module.exports.data = [
     price: 2200,
     location: "Boston",
     country: "United States",
+    tags : ["Monuments"]
   },
   {
     title: "Beachfront Bungalow in Bali",
@@ -178,6 +192,7 @@ module.exports.data = [
     price: 1800,
     location: "Bali",
     country: "Indonesia",
+    tags : ["Pools", "Beach"]
   },
   {
     title: "Mountain View Cabin in Banff",
@@ -190,6 +205,7 @@ module.exports.data = [
     price: 1500,
     location: "Banff",
     country: "Canada",
+    tags : ["Mountains", "Forest"]
   },
   {
     title: "Art Deco Apartment in Miami",
@@ -200,8 +216,9 @@ module.exports.data = [
       url: "https://plus.unsplash.com/premium_photo-1670963964797-942df1804579?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTZ8fGxvZGdlfGVufDB8fDB8fHww&auto=format&fit=crop&w=800&q=60",
     },
     price: 1600,
-    location: "Miami",
+    location: "Miami",  
     country: "United States",
+    tags : ["Snow", "Skiing"]
   },
   {
     title: "Tropical Villa in Phuket",
@@ -214,6 +231,7 @@ module.exports.data = [
     price: 3000,
     location: "Phuket",
     country: "Thailand",
+    tags : ["Villa", "Pools"]
   },
   {
     title: "Historic Castle in Scotland",
@@ -226,6 +244,7 @@ module.exports.data = [
     price: 4000,
     location: "Scottish Highlands",
     country: "United Kingdom",
+    tags : ["Castles", "Villa"]
   },
   {
     title: "Desert Oasis in Dubai",
@@ -238,6 +257,7 @@ module.exports.data = [
     price: 5000,
     location: "Dubai",
     country: "United Arab Emirates",
+    tags : ["Desert", "Pools"]
   },
   {
     title: "Rustic Log Cabin in Montana",
@@ -250,6 +270,7 @@ module.exports.data = [
     price: 1100,
     location: "Montana",
     country: "United States",
+    tags : ["Top Cities", "Forest"]
   },
   {
     title: "Beachfront Villa in Greece",
@@ -262,6 +283,7 @@ module.exports.data = [
     price: 2500,
     location: "Mykonos",
     country: "Greece",
+    tags : ["Villa", "Beach"]
   },
   {
     title: "Eco-Friendly Treehouse Retreat",
@@ -274,6 +296,7 @@ module.exports.data = [
     price: 750,
     location: "Costa Rica",
     country: "Costa Rica",
+    tags : ["Treehouse", "Forest"]
   },
   {
     title: "Historic Cottage in Charleston",
@@ -286,6 +309,7 @@ module.exports.data = [
     price: 1600,
     location: "Charleston",
     country: "United States",
+    tags : ["Cottage", "Garden"]
   },
   {
     title: "Modern Apartment in Tokyo",
@@ -298,6 +322,7 @@ module.exports.data = [
     price: 2000,
     location: "Tokyo",
     country: "Japan",
+    tags : ["Top Cities"]
   },
   {
     title: "Lakefront Cabin in New Hampshire",
@@ -310,6 +335,7 @@ module.exports.data = [
     price: 1200,
     location: "New Hampshire",
     country: "United States",
+    tags : ["Treehouse", "Lakeside"]
   },
   {
     title: "Luxury Villa in the Maldives",
@@ -322,6 +348,7 @@ module.exports.data = [
     price: 6000,
     location: "Maldives",
     country: "Maldives",
+    tags : ["Castles", "Villa"]
   },
   {
     title: "Ski Chalet in Aspen",
@@ -334,6 +361,7 @@ module.exports.data = [
     price: 4000,
     location: "Aspen",
     country: "United States",
+    tags : ["Skiing", "Snow"]
   },
   {
     title: "Secluded Beach House in Costa Rica",
@@ -346,5 +374,93 @@ module.exports.data = [
     price: 1800,
     location: "Costa Rica",
     country: "Costa Rica",
+    tags : ["Beach"]
+  },
+];
+
+module.exports.tagsData = [
+  {
+    tagIcon : "fa-duotone fa-solid fa-fire",
+    tagName : "Trending"
+  },
+  {
+    tagIcon: "fa-duotone fa-solid fa-mountain-city",
+    tagName: "Top Cities"
+  },
+  {
+    tagIcon: "fa-duotone fa-solid fa-mountain",
+    tagName: "Mountains"
+  },
+  {
+    tagIcon: "fa-duotone fa-solid fa-castle",
+    tagName: "Castles"
+  },
+  {
+    tagIcon: "fa-duotone fa-solid fa-person-swimming",
+    tagName: "Pools"
+  },
+  {
+    tagIcon: "fa-duotone fa-solid fa-campground",
+    tagName: "Camping"
+  },
+  {
+    tagIcon: "fa-duotone fa-solid fa-cow",
+    tagName: "Farms"
+  },
+  {
+    tagIcon: "fa-duotone fa-solid fa-snowflake",
+    tagName: "Arctic"
+  },
+  {
+    tagIcon: "fa-duotone fa-solid fa-person-skiing",
+    tagName: "Skiing"
+  },
+  {
+    tagIcon: "fa-duotone fa-solid fa-tree",
+    tagName: "Forest"
+  },
+  {
+    tagIcon: "fa-duotone fa-solid fa-snowman",
+    tagName: "Snow"
+  },
+  {
+    tagIcon:"fa-duotone fa-solid fa-monument",
+    tagName:"Monuments"
+  },
+  {
+    tagIcon:"fas fa-thermometer-full",
+    tagName:"Desert"
+  },
+  {
+    tagIcon:"fas fa-ship",
+    tagName:"Island"
+  },
+  {
+    tagIcon:"fa-duotone fa-solid fa-seedling",
+    tagName:"Garden"
+  },
+  {
+    tagIcon:"fa-duotone fa-solid fa-house-chimney",
+    tagName:"Cottage"
+  },
+  {
+    tagIcon: "fa-duotone fa-solid fa-house-flood-water",
+    tagName: "Lakeside"
+  },
+  {
+    tagIcon:"fa-duotone fa-solid fa-hippo",
+    tagName:"Wildlife"
+  },
+  {
+    tagIcon:"fa-duotone fa-solid fa-city",
+    tagName:"Villa"
+  },
+  {
+    tagIcon:"fa-duotone fa-solid fa-house-tree",
+    tagName:"Treehouse"
+  },
+  {
+    tagIcon:"fa-duotone fa-solid fa-umbrella-beach",
+    tagName:"Beach"
   },
 ];

@@ -3,16 +3,15 @@ if (process.env.Node_ENV != "production"){
 }
 
 const mongoose = require(`mongoose`);
-let testData = require(`./data.js`);
+let {testData, tagsData} = require(`./data.js`);
 const Listing = require(`../models/listing.js`);
+const Tag = require(`../models/tag.js`);
 const mbxGeocoding = require("@mapbox/mapbox-sdk/services/geocoding.js");
 const mapToken = process.env.MAP_TOKEN
 const geocodingClient = mbxGeocoding({accessToken : mapToken})
 
-testData = testData.data;
-
 async function main(){
-    await mongoose.connect(`mongodb://127.0.0.1:27017/wanderlust`);
+    await mongoose.connect(process.env.MONGO_ATLAS_URL);
 }
 
 main().then(() => console.log(`Connection Successfull`))
@@ -28,12 +27,28 @@ async function addCoordinates(){
     }
 }
 
-async function initializeDB(){
+async function initializeTagDB(){
+    await Tag.deleteMany({});
+    await Tag.insertMany(tagsData);
+    console.log("Tag Database Is Initialized");
+}
+
+async function setupTestData(){
+    await initializeTagDB();
     await addCoordinates();
     await Listing.deleteMany({});
-    testData.data = testData.map((obj) => ({...obj, owner:'66e1361428fe43fd1034dec1'}));
-    await Listing.insertMany(testData.data);
+    let tagArr = await Tag.find({});
+    let tagId = {};
+    for (let i=0; i<tagArr.length; i++) tagId[tagArr[i].tagName] = tagArr[i]._id;
+    console.log("\nTag Data : \n");
+    console.log(tagArr);
+    console.log("\nTag Object : \n");
+    console.log(tagId);
+    testData = testData.map((obj) => ({...obj, tags : obj.tags.map((name) => tagId[name])}));
+    testData = testData.map((obj) => ({...obj, owner:'672e503270c08ad0f3ceaa73'}));
+    await Listing.insertMany(testData);
+    console.log(testData);
     console.log(`The Database Is Initialized With The Test Data`);
 }
 
-initializeDB();
+setupTestData();

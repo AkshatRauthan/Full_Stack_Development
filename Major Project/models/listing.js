@@ -45,6 +45,10 @@ const listingSchema = new Schema({
             type : [Number],
             required : true
         }
+    },
+    tags: {
+        type : [Schema.Types.ObjectId],
+        ref : "Tag"
     }
 });
 

@@ -1,4 +1,7 @@
 {
+  "engines" : {
+    "node" : "20.11.0" 
+  },
   "name": "full_stack_development",
   "version": "1.0.0",
   "description": "",

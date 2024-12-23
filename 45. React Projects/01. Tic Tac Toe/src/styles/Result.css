@@ -1,0 +1,32 @@
+.showResult {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.885);
+    z-index: 1;
+}
+
+.resultContainer {
+    margin-top: 15vh;
+}
+
+.resultHeadings {
+    color: #fff;
+    font-size: 2.95rem;
+}
+
+.buttonsContainer {
+    margin: 0 auto;
+}
+
+Button{
+    font-size: 1.75rem !important;
+    background-color: rgba(0, 0, 0, 0.8) !important;
+    text-transform: none !important;
+    border-radius: 0.5rem !important;
+}

@@ -13,15 +13,24 @@ const listingRouter = require(`./routes/listing.js`);
 const reviewRouter = require(`./routes/reviews.js`);
 const userRouter = require(`./routes/user.js`);
 const session = require(`express-session`);
+const MongoStore = require('connect-mongo');
 const flash = require(`connect-flash`);
 const passport = require(`passport`);
 const LocalStrategy = require('passport-local');
 const User = require('./models/user.js');
 const multer = require(`multer`);
 
+const store = MongoStore.create({
+    mongoUrl : process.env.MONGO_ATLAS_URL,
+    crypto : {
+        secret: process.env.SECRET
+    },
+    touchAfter : 24 * 60 * 60
+})
 
 const sessionOptions = {
-    secret: "mySuperSecretIsWhomITrulyAm",
+    store : store,
+    secret: process.env.SECRET,
     resave : false,
     saveUninitialized : true,
     cookie : {
@@ -49,7 +58,7 @@ passport.serializeUser(User.serializeUser());
 passport.deserializeUser(User.deserializeUser());
 
 async function main(){
-    await mongoose.connect(`mongodb://127.0.0.1:27017/wanderlust`);
+    await mongoose.connect(process.env.MONGO_ATLAS_URL);
 }
 
 main().then(() => console.log(`Connection Successfull`))
@@ -58,10 +67,6 @@ main().then(() => console.log(`Connection Successfull`))
 app.listen(8080, () => {
     console.log(`\nThe App Is Listenig On Port 8080`);
 });
-
-// app.get('/', (req, res) => {
-//     res.send('The App Is Working');
-// });
 
 // Adding Our Flash Messages In Session Object And Making Them Acessible For All Routes
 // By Storing Them In As Variables In The locals Object Of Request.

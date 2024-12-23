@@ -5,10 +5,18 @@ body{
     min-height: 100vh;
 }
 
-.container{
-    flex: 1;
+.body-tag{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
+.alert {
+    width: fit-content !important;
+    min-width: 10rem !important;
+    margin: 0.25rem auto !important;
+}
 
 /* Navbar */
 .navbar{
@@ -36,7 +44,6 @@ body{
     justify-content: center;
     align-content: space-evenly;
     text-align: center;
-    
 }
 
 .f-info-links, .f-info-socials{
@@ -70,29 +77,78 @@ body{
 
 
 /* Index Route : index.ejs */
+.scrool-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30px;
+    width: 30px;
+    align-self: center;
+    border-radius: 50%;
+    background-color: none;
+    /* border: 1px solid black; */
+}
+
+.scrool-buttons {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    border-radius: 50%;
+    margin:0 0.5rem 0.5rem 0.5rem;
+    cursor: pointer;
+    padding-bottom: 0.4rem;
+    font-size: 1.4rem;
+    background-color: #fff;
+    color: #fe424d;
+    border: solid 0.15rem #ff5a65;
+    opacity: 0.65;
+}
+
+.scrool-buttons:hover {
+    opacity: 1;
+    transform: scale(1.15);
+}
+
 #filters{
     display: flex;
     justify-content: space-between;
+    height: fit-content;
+    /* background-color: aquamarine; */
+    width: 90vw;
 }
 
 .options{
+    scroll-behavior: smooth;
     display: flex;
+    height: max-content;
+    /* margin-top: 1rem; */
+    white-space: nowrap;
+    overflow: hidden;
+    width: 93%;
 }
 
 .filter{
     text-align: center;
-    margin-right: 1.8rem;
-    margin-top: 1.4rem;
-    opacity: 0.8;
+    padding: 0.75rem;
+    opacity: 0.775;
+    margin: 0 0.25rem 0 0.25rem;
+    color: #fe424d;
+}
+
+.selected-filter{
+    transform: scale(1.125);
+    opacity: 1;
 }
 
 .filter>p{
     font-size: 0.8rem;
+    font-weight: 500;
+    margin: 0px;
 }
 
 .filter:hover{
-    opacity: 1;
     cursor: pointer;
+    transform: scale(1.125);
 }
 
 .form-check-label{
@@ -109,6 +165,10 @@ body{
     padding: 0.8rem 1.2rem;
     align-self: center;
     justify-self:right;
+}
+
+#listings-container {
+    width: 85vw;
 }
 
 .listing-card{
@@ -170,4 +230,89 @@ body{
     object-fit: cover;
     width: 450px;
     max-height: 300px;
+}
+
+/* Multiple Tags Selection */
+
+/* Container for dropdown */
+.dropdown-container {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+/* Dropdown button styled like file input */
+.dropdown-button {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    cursor: pointer;
+    margin-right: 8px;
+}
+/* Display selected values styled like the "No file chosen" box */
+
+.dropdown-button{
+    margin: 0;
+    background-color: #f9f9f9;
+    border-radius: 5px 0 0 5px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    border-right: none;
+}
+.selected-values {
+    flex: 1;
+    flex-direction: column;
+    height: 2.55rem;
+    align-content: space-around;
+    padding: 0rem 0rem 0rem 0.75rem;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    border-radius: 0 5px 5px 0;
+}
+/* Hidden dropdown */
+#dropdown {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    border: 1px solid #ccc;
+    width: 200px;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 4px;
+    z-index: 1;
+    border-radius: 5px;
+}
+/* Style for each option in the dropdown */
+.dropdown-option {
+    padding: 8px;
+    padding-left: 16px;
+    cursor: pointer;
+    margin: 2px;
+    border-radius: 5px;
+}
+.dropdown-option:hover {
+    background-color: #e0e0e0;
+}
+/* Selected option pills */
+.selected-pill {
+    display: inline-block;
+    padding: 4px 8px;
+    margin-right: 4px;
+    margin-top: 4px;
+    background-color: rgba(255, 32, 47, 0.9);
+    color: #fff;
+    border-radius: 12px;
+    font-size: 12px;
+}
+.selected-pill .remove {
+    margin-left: 4px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.selected-options, .selected-options:hover {
+    background-color: rgba(255, 32, 47, 0.9);
+    color: white;
 }

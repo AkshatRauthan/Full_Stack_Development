@@ -20,11 +20,13 @@ export function Counter(){
         setCount((count) => {
             return count + 1;
         });
+        console.log(count);
         setCount((count) => {
             return count + 1;
         });
         console.log(count);
         // Will Print The Updated Value As The New Value Will Be Updated After Re-Rendering.
+        // Output Will Be Like : 0 0, 2 2, 4 4 ..... For Every Consecutive Click.
     };
 
     return (

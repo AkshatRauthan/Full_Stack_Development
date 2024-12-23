@@ -5,7 +5,7 @@
     
     <div class="col-8 offset-2">
 
-        <form action="/listings" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
+        <form action="/listings" id="listing-form" method="post" novalidate class="needs-validation" enctype="multipart/form-data">
             <div class="mb-4">
                 <label for="listing[title]" class="form-label" >Title : </label>&nbsp;
                 <input name="listing[title]" class="form-control" type="text"  
@@ -25,6 +25,23 @@
                 <div class="invalid-feedback">
                     <div class="input-feedback"><i class="material-symbols-outlined">error</i>
                         &nbsp; Please Enter A Valid Description</div>
+                </div>
+            </div>
+
+            <div class="mb-4">
+                <!-- Multi-select dropdown for professions -->
+                <label for="" class="form-label">Tags : </label><br>
+                <div class="dropdown-container">
+                    <div class="dropdown-button" onmouseenter="toggleDropdown()" onclick="toggleDropdown()"></div>
+                    <div class="selected-values" id="selectedValues">No tags chosen</div>
+                </div>
+                <script>
+                    const tagsData = <%- JSON.stringify(tagsData) %>;
+                </script>
+                
+                <!-- Custom dropdown options -->
+                <div id="dropdown">
+                    <!-- Options will be added dynamically -->
                 </div>
             </div>
 
@@ -71,11 +88,15 @@
                     <div class="input-feedback"><i class="material-symbols-outlined">error</i>
                         &nbsp; Please Enter A Valid Country</div>
                 </div>
-            </div>  
+            </div>
 
             <button class="btn btn-dark" type="submit">Add</button>&nbsp;&nbsp;
             <button class="btn btn-dark" type="reset">Reset</button> 
         </form><br><br>
-
+        
+        <script>
+            const isUpdateForm = false;
+        </script>
+        <script src="/js/listingFormHandlers.js"></script>
     </div>
 </body>

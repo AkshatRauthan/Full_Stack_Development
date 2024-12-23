@@ -1,0 +1,10 @@
+.boxRow{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.gameBoard {
+    margin: 0px auto;
+    width: fit-content;
+}
