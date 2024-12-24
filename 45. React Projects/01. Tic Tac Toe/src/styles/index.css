@@ -16,30 +16,3 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
-:root {
-  position: relative;
-  overflow: hidden;
-}
-
-:root::before,
-:root::after {
-  content: '';
-  position: absolute;
-  width: 60%;
-  height: 60%;
-  background: #6F8090;
-  clip-path: polygon(0 0, 100% 0, 0 100%);
-}
-
-:root::before {
-  top: 0;
-  left: 0;
-  transform: translate(-30%, -30%);
-}
-
-:root::after {
-  bottom: 0;
-  right: 0;
-  transform: translate(30%, 30%) rotate(180deg);
-}
