@@ -20,12 +20,8 @@
     font-size: 2.35rem;
 }
 
-.buttonsContainer {
-    margin: 0 auto;
-}
-
 Button{
-    font-size: 1.75rem !important;
+    font-size: 1.5rem !important;
     background-color: rgba(0, 0, 0, 0.8) !important;
     text-transform: none !important;
     border-radius: 0.5rem !important;

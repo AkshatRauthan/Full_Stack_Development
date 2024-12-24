@@ -15,7 +15,7 @@ let Result = (props) => {
             <div className="resultContainer">
                 {isDraw && <Draw />}
                 {!isDraw && <Winner winner={winner}/>}
-                <div className="buttonsContainer">
+                <div className="resultButtons">
                     <Button variant="outlined" size="large" 
                     onClick={() => restartGame()}>Restart Game</Button><br /><br />
                     
