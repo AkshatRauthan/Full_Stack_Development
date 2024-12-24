@@ -1,6 +1,6 @@
 .inputTitle {
     font-weight: 800;
-    font-size: 1.85rem;
+    font-size: 1.5rem;
     margin-top: 12vh;
     color: rgba(255, 255, 255, 0.885);
 }
@@ -11,7 +11,7 @@
 }
 
 input {
-    font-size: 1.75rem !important;
+    font-size: 1.35rem !important;
     background-color: rgb(31,80,123) !important;
     border: 2px solid rgba(255, 255, 255, 0.85);
     color: rgba(255, 255, 255, 0.85);
@@ -25,7 +25,7 @@ input {
 }
 
 .changeNameButton {
-    font-size: 1.5rem !important;
+    font-size: 1.25rem !important;
     background-color: rgb(31,80,123) !important;
     border: 2px solid rgba(255, 255, 255, 0.85);
     color: rgba(255, 255, 255, 0.85);
