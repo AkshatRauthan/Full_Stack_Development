@@ -3,8 +3,7 @@ import "../styles/GameBoard.css";
 import { useState, useEffect } from "react";
 
 function GameBoard(props){
-    let {playerName, box, setBox, gameWinner} = props;
-    let [player, setPlayer] = useState('0');
+    let {player, setPlayer, playerName, box, setBox, gameWinner} = props;
     
     useEffect(() => checkResult(box, playerName, gameWinner), [box, player]);
 

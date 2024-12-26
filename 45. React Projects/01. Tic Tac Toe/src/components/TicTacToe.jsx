@@ -10,6 +10,7 @@ function TicTacToe(){
     let [winner, setWinner] = useState(null);
     let [box, setBox] = useState(Array(9).fill(null));
     let [changingName, setChangingName] = useState(true);
+    let [player, setPlayer] = useState('0');
 
     let gameWinner = (currwinner) => {
         if (!currwinner) setWinner((winner) => "Draw");
@@ -47,20 +48,25 @@ function TicTacToe(){
 
     return (
         <>
-            {winner && <Result winner={winner} restartGame={restartGame} clearScore={startNewGame}/>}
-            
             <p className="gameHeading"> Tic Tac Toe</p>
+
+            {winner && <Result winner={winner} restartGame={restartGame} clearScore={startNewGame} />}
 
             {changingName &&
             <ChangeName playerName={playerName} setPlayerName={setPlayerName} changeName={changeName}/> }
             
             {!changingName && <>
+
+                <div className="scoreBoard">
+                    <span className="scoreCard">{player == "0" ? "0 / "+playerName.of0 : "X / "+playerName.ofX}'s Turn</span>
+                </div>
+                
                 <div className="scoreBoard">
                     <span className="scoreCard">{playerName.of0} : {score.of0}</span>
                     <span className="scoreCard">{playerName.ofX} : {score.ofX}</span>
                 </div>
 
-                <GameBoard playerName={playerName} box={box} setBox={setBox} gameWinner={gameWinner} />
+                <GameBoard player={player} setPlayer={setPlayer} playerName={playerName} box={box} setBox={setBox} gameWinner={gameWinner} />
                 
                 <div className="buttonsContainer">
                     <button className="button" size="medium" onClick={() => changeName(true)}> Change Name </button>

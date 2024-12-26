@@ -12,7 +12,7 @@
 }
 
 .resultContainer {
-    margin-top: 15vh;
+    margin-top: 5vh;
 }
 
 .resultHeadings {
@@ -24,11 +24,11 @@
     margin: 0 auto;
 }
 
-Button{
-    font-size: 1.75rem !important;
-    background-color: rgba(0, 0, 0, 0.8) !important;
-    text-transform: none !important;
-    border-radius: 0.5rem !important;
+.resultButtonsContainer>Button{
+    font-size: 1.5rem;
+    background-color: rgba(0, 0, 0, 0.8);
+    text-transform: none;
+    border-radius: 0.5rem;
 }
 
 .resultButtonsContainer>Button:hover {
