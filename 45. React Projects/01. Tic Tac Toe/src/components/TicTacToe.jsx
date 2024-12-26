@@ -64,7 +64,7 @@ function TicTacToe(){
                 
                 <div className="buttonsContainer">
                     <button className="button" size="medium" onClick={() => changeName(true)}> Change Name </button>
-                    <button className="button" size="medium" onClick={restartGame}> Reset Game </button>
+                    <button className="button" size="medium" onClick={restartGame}> Restart Game </button>
                 </div>
             </>}
         </>

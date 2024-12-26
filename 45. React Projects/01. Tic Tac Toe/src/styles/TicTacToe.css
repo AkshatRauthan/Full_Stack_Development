@@ -1,9 +1,7 @@
 .gameHeading {
-    font-size: 2.35rem;
+    font-size: 2.65rem;
     font-weight: 800;
     color: rgba(255, 255, 255, 1);
-    margin-top: 2rem;
-    margin-bottom: 2rem;
 }
 
 .scoreBoard {
@@ -16,7 +14,7 @@
 
 .scoreCard {
     font-weight: 800;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: rgba(255, 255, 255, 0.8);
 }
 
@@ -29,7 +27,7 @@
 }
 
 .button {
-    font-size: 1.2rem !important;
+    font-size: 1.5rem !important;
     background-color: rgb(31,80,123) !important;
     border: 2px solid rgba(255, 255, 255, 0.85);
     color: rgba(255, 255, 255, 0.85);
