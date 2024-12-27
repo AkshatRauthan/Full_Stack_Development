@@ -16,7 +16,7 @@ body {
   min-width: 320px;
   min-height: 100vh;
 }
-
+/* 
 :root {
   position: relative;
   overflow: hidden;
@@ -42,4 +42,4 @@ body {
   bottom: 0;
   right: 0;
   transform: translate(30%, 30%) rotate(180deg);
-}
+} */
