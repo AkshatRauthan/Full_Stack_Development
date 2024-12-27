@@ -57,7 +57,7 @@ function TicTacToe(){
             
             {!changingName && <>
 
-                <div className="scoreBoard">
+                <div className="scoreBoard" id="playerTurn">
                     <span className="scoreCard">{player == "0" ? "0 / "+playerName.of0 : "X / "+playerName.ofX}'s Turn</span>
                 </div>
                 

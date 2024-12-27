@@ -30,10 +30,45 @@
 
 .button {
     font-size: 1.25rem;
-    background-color: rgb(31,80,123);
+    background-color: rgb(31, 80, 123);
     border: 2px solid rgba(255, 255, 255, 0.85);
     color: rgba(255, 255, 255, 0.85);
     font-weight: 800;
     padding: 0.5rem 1rem;
     border-radius: 5px;
+}
+
+#playerTurn {
+    justify-content: center;
+    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+    .gameHeading {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+        margin-top: 1.25rem;
+    }   
+
+    .scoreBoard {
+        flex-direction: row;
+        width: 90%;
+        margin-bottom: 1rem;
+        justify-content: space-between;
+    }
+
+    .scoreCard {
+        font-size: 1.5rem;
+        width: fit-content;
+    }
+
+    .buttonsContainer {
+        flex-direction: column;
+        padding-top: 1.5rem;
+    }
+
+    .button {
+        font-size: 1.1rem;
+        margin-bottom: 0.5rem;
+    }
 }

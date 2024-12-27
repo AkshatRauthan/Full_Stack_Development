@@ -24,6 +24,33 @@
     margin: 0 auto;
 }
 
+@media (max-width: 768px) {
+    .showResult {
+        display: flex;
+        flex-direction: column;  /* Stack the items vertically */
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100vh;
+        width: 100vw;
+        background: rgba(0, 0, 0, 0.885);
+        z-index: 1;
+    }
+
+    .resultContainer {
+        margin-top: 20vh; /* Adjust margin if needed */
+        text-align: center; /* Ensure text is centered */
+    }
+
+    .resultHeadings {
+        font-size: 2rem; /* Adjust font size for mobile */
+    }
+
+    .resultButtonsContainer {
+        margin-top: 3rem; /* Space between buttons */
+    }
+}
+
 .resultButtonsContainer>Button{
     font-size: 1.5rem;
     background-color: rgba(0, 0, 0, 0.8);

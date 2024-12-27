@@ -34,3 +34,15 @@ input {
     margin-top: 2rem;
     border-radius: 7px;
 }
+
+@media (max-width: 768px) {
+    .inputTitle{
+        margin-top: 10vh;
+        margin-bottom: 8vh;
+        padding: 0 0.7rem;
+    }
+
+    input {
+        margin-bottom: 2rem;
+    }
+}
