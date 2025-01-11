@@ -1,10 +1,10 @@
 import "../styles/Box.css";
 
 function Box(props) {
-    let {idx, box, setBoxValue, player} = props;
+    let {idx, box, setBox,  setBoxValue, player, setPlayer} = props;
     
     return (
-        <div className="boxCell" onClick={() => setBoxValue(idx, player)}>
+        <div className="boxCell" onClick={() => setBoxValue(idx, player, box, setBox, player, setPlayer)}>
             <div className="boxButton"> {box[idx]} </div>
         </div>
     )

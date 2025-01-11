@@ -1,0 +1,141 @@
+/* Title for input section */
+.inputTitle {
+    font-weight: 800;
+    font-size: 1.5rem;
+    margin-top: 16vh;
+    color: rgba(255, 255, 255, 0.885);
+    text-align: center;
+}
+
+/* Container for inputs */
+.inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Input fields styling */
+input {
+    font-size: 1.5rem;
+    background-color: rgb(31, 80, 123);
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 800;
+    padding: 0.65rem 1rem;
+    width: fit-content;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 7px;
+}
+
+/* Submit button styling */
+.changeNameButton {
+    font-weight: 800;
+    font-size: 1.25rem;
+    margin-top: 1.5rem;
+    border-radius: 5px;
+    padding: 0.5rem 1rem;
+    background-color: rgb(31, 80, 123);
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.modeTitle {
+    font-weight: 800;
+    font-size: 1.65rem;
+    margin-top: 5rem;
+    color: rgba(255, 255, 255, 0.885);
+    text-align: center;
+}
+
+/* Game mode selection container */
+.modeContainer {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 1rem;
+    margin-top: 2.75rem;
+}
+
+/* Game mode buttons */
+.modeButton {
+    font-weight: 800;
+    font-size: 1.25rem;
+    padding: 0.5rem 1.5rem;
+    border-radius: 7px;
+    background-color: rgb(31, 80, 123);
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.85);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+/* Difficulty dropdown styling */
+.difficultyDropdown {
+    font-size: 1.25rem;
+    background-color: rgb(31, 80, 123);
+    border: 2px solid rgba(255, 255, 255, 0.85);
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 800;
+    padding: 0.65rem 1rem;
+    width: fit-content;
+    max-width: 100%;
+    margin: 0 auto;
+    text-align: center;
+    border-radius: 7px;
+    cursor: pointer;
+    appearance: none; /* Removes native dropdown styles */
+}
+
+/* Styling the dropdown items */
+.difficultyDropdown option {
+    font-size: 1.25rem;
+    background-color: rgb(31, 80, 123);
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 600;
+    padding: 0.5rem 1rem;
+    border: none;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .inputTitle {
+        margin-top: 10vh;
+        margin-bottom: 8vh;
+        padding: 0 0.7rem;
+    }
+
+    .inputContainer {
+        gap: 1rem;
+    }
+
+    input {
+        margin-bottom: 2rem;
+    }
+
+    .modeContainer {
+        flex-direction: column;
+        align-items: center;
+        gap: 1.5rem;
+    }
+
+    .modeButton {
+        width: 80%;
+        text-align: center;
+    }
+
+    .difficultyDropdown {
+        width: 80%;
+        padding: 0.5rem 1rem;
+        font-size: 1.1rem;
+    }
+
+    .difficultyDropdown option {
+        font-size: 1.1rem;
+        padding: 0.5rem;
+    }
+}

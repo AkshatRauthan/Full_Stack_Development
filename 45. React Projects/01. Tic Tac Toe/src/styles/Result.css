@@ -27,7 +27,7 @@
 @media (max-width: 768px) {
     .showResult {
         display: flex;
-        flex-direction: column;  /* Stack the items vertically */
+        flex-direction: column;
         position: absolute;
         top: 0;
         left: 0;
@@ -38,16 +38,16 @@
     }
 
     .resultContainer {
-        margin-top: 20vh; /* Adjust margin if needed */
-        text-align: center; /* Ensure text is centered */
+        margin-top: 20vh;
+        text-align: center;
     }
 
     .resultHeadings {
-        font-size: 2rem; /* Adjust font size for mobile */
+        font-size: 2rem;
     }
 
     .resultButtonsContainer {
-        margin-top: 3rem; /* Space between buttons */
+        margin-top: 3rem;
     }
 }
 

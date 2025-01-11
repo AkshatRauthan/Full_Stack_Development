@@ -63,12 +63,13 @@
     }
 
     .buttonsContainer {
-        flex-direction: column;
+        flex-direction: row;
         padding-top: 1.5rem;
+        justify-content: space-between;
     }
 
     .button {
-        font-size: 1.1rem;
+        font-size: 1.4rem;
         margin-bottom: 0.5rem;
     }
 }
